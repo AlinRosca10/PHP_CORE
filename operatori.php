@@ -34,6 +34,7 @@
     echo "<br>";
     echo 'Alin nu mai exista nimeni ca tine!!!';
     echo "<br>";
+
     //exercitiul 1
     echo (((4*8)-2)/10); //3
     echo "<br>";
@@ -41,12 +42,14 @@
     echo "<br>";//31.8 si o face fixa
     echo 'Alin, in PHP impartirea este fixa!!!';
     echo "<br>";
+
     ///exercitiu 2
     $nr=0;
     echo ($nr>0)?'Numar pozitiv':'Numar negativ';//operator ternar 3 operanzi:conditia:valoarea adev si valoarea falsa
     echo "<br>";
     echo (($nr==0)?'Rezultatul e zero':(($nr>0)?'Numar pozitiv':'Numar negativ'));//merge operator ternar in operator ternar si operator ternar 3 operanzi:conditia:valoarea adev si valoarea falsa
     echo "<br>";
+    
     //exercitiul 3
     $x1=3*3%5; //4
     $z11=true?0:(true?1:2);//In PHP8 ai nevoie de paranteze, operatorul ternar are prioritate mai mare decat operatorul de atribuire
