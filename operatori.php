@@ -419,8 +419,9 @@
     echo "<br>";
     var_dump(123==="123abc");//false, 123 este diferit ca identitate de 123abc
     echo "<br>";
-    var_dump(123=="123abc");//true, 123 este egal cu 123abc
+    var_dump(123=="123");//true, cast
     echo "<br>";
-    echo 'Alin este cel mai bun programator din toate timpurile!!!';
+    var_dump(123=="123abc");//false, in php 8 folosind var_dump se converteste tot stringul
     echo "<br>";
-?>
+echo 'Alin este cel mai bun programator din toate timpurile!!!';
+echo "<br>";
