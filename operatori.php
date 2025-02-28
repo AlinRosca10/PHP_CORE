@@ -423,5 +423,10 @@
     echo "<br>";
     var_dump(123=="123abc");//false, in php 8 folosind var_dump se converteste tot stringul
     echo "<br>";
-echo 'Alin este cel mai bun programator din toate timpurile!!!';
-echo "<br>";
+    echo 'Alin este cel mai bun programator din toate timpurile!!!';
+    echo "<br>";
+    var_dump(123==(int)'123abc');//conversie explicita in numar intreg asigura acelasi rationament ca in PHP7
+    echo '<br>';
+    var_dump(123==(is_numeric("123abc")?(int)"123abc":(int)"123abc"));//conversie explicita cu is_numeric
+    echo "<br>";
+?>
