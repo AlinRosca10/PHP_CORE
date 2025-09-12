@@ -1,0 +1,1 @@
+console.log('Salut, Alin!!! Esti cel mai mare programator din intreaga lume!!!');
