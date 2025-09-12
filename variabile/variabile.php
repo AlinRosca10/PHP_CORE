@@ -145,5 +145,4 @@
     define("SALUT2", "LinkAcademy va ureaza o seara cat mai placuta!", true); // true pentru case insensitive
     echo SALUT2; // afiseaza LinkAcademy va ureaza o seara cat mai placuta!
     echo '<br>';
-
 ?>
