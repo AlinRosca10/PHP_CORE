@@ -114,7 +114,7 @@
         echo $z12;
     }
     unset($z12);
-    echo $z12; //a golit-o
+    //echo $z12; //a golit-o
     echo "sa vedem";
     echo "\n";
     echo "rr";
