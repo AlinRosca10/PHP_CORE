@@ -84,7 +84,7 @@
     echo "<br>";
     echo PHP_EOL;
 
-    // 10.
+    // 10. Using arrays in PHP
     $fructe = array("mere", "pere", "banane", "struguri", "kiwi"); // indexed array
     var_export($fructe);
     echo "<br>";
@@ -96,5 +96,48 @@
     echo "<br>";
     print($fructe[1]); // accessing array elements
     echo "<br>";
+
+    // 11. 
+    $car[0][0] = "GM";
+    $car[0][1] = "Cobalt";
+    $car[0][2] = "Onix";
+    $car[0][3] = "Camaro";
+    $car[1][0] = "Ford";
+    $car[1][1] = "Focus";
+    $car[1][2] = "Mustang";
+    $car[1][3] = "Explorer";
+    $car[2][0] = "Dacia";
+    $car[2][1] = "Logan";
+    $car[2][2] = "Duster";
+    $car[2][3] = "Spring";
+    var_dump($car);
+    echo "<br>";
+    echo $car[1][2]; // Mustang
+    echo "<br>";
+    print($car[2][3]); // Spring
+    echo "<br>";
+    echo PHP_EOL;
+
+    // 12. String declaration methods in PHP
+    $nume = "Adrian";
+    // Heredoc
+    $str = <<<EOD
+    Numele meu este $nume.
+    Am invatat PHP.
+    EOD;
+    echo $str;
+    echo '<br>Heredoc<br>';
+    $str = <<<EOD
+    Numele meu este {$nume}.
+    Am invatat PHP.
+    EOD;
+    echo $str;
+    echo '<br>Nowdoc cu acolade<br>';
+    $str = <<<'EOD'
+    Numele meu este {$nume}.
+    Am invatat PHP.
+    EOD;
+    echo $str;
+
 
 ?>
