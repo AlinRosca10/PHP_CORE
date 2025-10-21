@@ -19,7 +19,7 @@ Un proiect PHP demonstrativ pentru luarea deciziilor — include structuri condi
    git clone git@github.com:alinrosca/PHP_CORE.git
 2. Intră în director:
 
-  cd decision_project
+   cd decision_project
 3. Rulează proiectul local cu XAMPP sau PHP built-in:
 
-php -S localhost:8888
+   php -S localhost:8888
