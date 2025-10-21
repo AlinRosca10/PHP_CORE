@@ -74,7 +74,7 @@
             }
 
         ?>
-        
+
 
         <h2>10. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv, negativ sau zero.</h2>
         <form method="post">
