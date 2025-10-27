@@ -36,6 +36,30 @@ body {
   align-items: center;
 }
 
+.aurora h2 {
+  font-size: 24px;
+  font-weight: bold;
+  border: 3px solid transparent;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,
+    var(--g1, #00ffe7),
+    var(--g2, #7f00ff),
+    var(--g3, #ff007f),
+    var(--g4, #00ff88)) padding-box,
+  linear-gradient(270deg,
+    var(--g1, #00ffe7),
+    var(--g2, #7f00ff),
+    var(--g3, #ff007f),
+    var(--g4, #00ff88)) border-box;
+  background-size: 300% 300%;
+  animation: auroraAnimation 6s ease infinite;
+  transition: all 0.5s ease-in-out;
+  color: #000000;
+  text-align: justify;
+  align-items: center;
+}
+
 .aurora-input {
   padding: 12px;
   font-size: 16px;

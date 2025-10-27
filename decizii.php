@@ -81,27 +81,28 @@
         </form>
         <?php
         
-        if (isset($_POST['find_max_of_three'])) {
+            if (isset($_POST['find_max_of_three'])) {
 
-            $num1 = rand(0, 100);
-            $num2 = rand(0, 100);
-            $num3 = rand(0, 100);
-            echo "<p>Generated numbers: $num1, $num2, and $num3</p>";
+                $num1 = rand(0, 100);
+                $num2 = rand(0, 100);
+                $num3 = rand(0, 100);
+                echo "<p>Generated numbers: $num1, $num2, and $num3</p>";
 
-            if ($num1 >= $num2 && $num1 >= $num3) {
-                echo "<p>The maximum number is $num1.</p>";
-            } elseif ($num2 >= $num1 && $num2 >= $num3) {
-                echo "<p>The maximum number is $num2.</p>";
-            } else {
-                echo "<p>The maximum number is $num3.</p>";
+                if ($num1 >= $num2 && $num1 >= $num3) {
+                    echo "<p>The maximum number is $num1.</p>";
+                } elseif ($num2 >= $num1 && $num2 >= $num3) {
+                    echo "<p>The maximum number is $num2.</p>";
+                } else {
+                    echo "<p>The maximum number is $num3.</p>";
+                }
             }
-        }
             if (isset($_POST['find_max_of_three'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
-            ?>
+        ?>
+        <h2 class="aurora">4. Intr-un parc se joaca 3 copii care au greutatile a, b, c. Sa se se stabileasca daca se pot aseza pe un balansoar astfel incat acesta sa fie in echilibru</h2>
 
-        <h2>9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
+        <h2 class="aurora">9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
         <form method="post">
             <button type="submit" name="check_divisibility" class="aurora-button">Check Divisibility</button>
         </form>
@@ -173,6 +174,93 @@
                     echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
                 }
             ?>
+                    <h2>12. Scrieti un algoritm care sa determine minimul dintre doua numere.</h2>
+        <form method="post">
+            <button type="submit" name="find_min" class="aurora-button">Find Min</button>
+        </form>
+        <?php
+            if (isset($_POST['find_min'])) {
+
+                $num1 = rand(1, 100);
+                $num2 = rand(1, 100);
+                echo "<p>Generated numbers: $num1 and $num2</p>";
+
+                if ($num1 < $num2) {
+                    echo "<p>The minimum number is $num1.</p>";
+                } elseif ($num2 < $num1) {
+                    echo "<p>The minimum number is $num2.</p>";
+                } else {
+                    echo "<p>Both numbers are equal.</p>";
+                }
+            }
+
+            if (isset($_POST['find_min'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>13. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv sau negativ.</h2>
+        <form method="post">
+            <button type="submit" name="check_positive_negative" class="aurora-button">Check Positive/Negative</button>
+        </form>
+        <?php
+            if (isset($_POST['check_positive_negative'])) {
+
+                $number = rand(-100, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number >= 0) {
+                    echo "<p>The number $number is positive.</p>";
+                } else {
+                    echo "<p>The number $number is negative.</p>";
+                }
+            }
+
+            if (isset($_POST['check_positive_negative'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>14. Sa se verifice daca un numar generat cu functia rand(1, 100) este mai mare decat 50.</h2>
+        <form method="post">
+            <button type="submit" name="check_greater_than_50" class="aurora-button">Check Greater Than 50</button>
+        </form>
+        <?php
+            if (isset($_POST['check_greater_than_50'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number > 50) {
+                    echo "<p>The number $number is greater than 50.</p>";
+                } else {
+                    echo "<p>The number $number is not greater than 50.</p>";
+                }
+            }
+
+            if (isset($_POST['check_greater_than_50'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>15. Sa se verifice daca un numar generat cu functia rand(1, 100) este intre 20 si 80.</h2>
+        <form method="post">
+            <button type="submit" name="check_between_20_and_80" class="aurora-button">Check Between 20 and 80</button>
+        </form>
+        <?php
+            if (isset($_POST['check_between_20_and_80'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number >= 20 && $number <= 80) {
+                    echo "<p>The number $number is between 20 and 80.</p>";
+                } else {
+                    echo "<p>The number $number is not between 20 and 80.</p>";
+                }
+            }
+
+            if (isset($_POST['check_between_20_and_80'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }   
+        ?>
     </header>
     <main>
         <section class="image-side-content">
