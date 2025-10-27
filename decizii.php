@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="decizii_icon/decision_icon.png">
     <link rel="stylesheet" href="decizii_style/style.css">
 </head>
-<body onload="window.scrollTo(0, localStorage.getItem('scroll') || 0)" onscroll="localStorage.setItem('scroll', window.scrollY)">
+<body>
     <header class="aurora-input aurora">
         <h1>PHP Decision Making</h1>
         <h2>1. Sa se verifice daca un numar generat cu functia rand(1, 30) este par sau impar.</h2>
@@ -334,6 +334,18 @@
     </main>
     <footer class="system-footer">
         <p>&copy; 2024 PHP Decision Making Exercises</p>
-    </footer>   
+    </footer> 
+    <script>
+        window.addEventListener('scroll', () => {
+            localStorage.setItem('scrollPosition', window.scrollY);
+        });
+
+        window.addEventListener('load', () => {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                window.scrollTo(0, parseInt(scrollPosition, 10));
+            }
+        });
+    </script>  
 </body>
 </html>
