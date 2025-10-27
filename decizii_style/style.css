@@ -37,6 +37,7 @@ body {
 }
 
 .aurora h2 {
+  display: flex;
   font-size: 24px;
   font-weight: bold;
   border: 3px solid transparent;

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="
+--g1:#ff8c00;
+--g2:#ff2e63;
+--g3:#9c1aff;
+--g4:#00fff5;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.2">
@@ -9,7 +13,7 @@
     <link rel="stylesheet" href="decizii_style/style.css">
 </head>
 <body>
-    <header class="aurora-input">
+    <header class="aurora-input aurora">
         <h1>PHP Decision Making</h1>
         <h2>1. Sa se verifice daca un numar generat cu functia rand(1, 30) este par sau impar.</h2>
         <form method="post">
@@ -100,9 +104,37 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2 class="aurora">4. Intr-un parc se joaca 3 copii care au greutatile a, b, c. Sa se se stabileasca daca se pot aseza pe un balansoar astfel incat acesta sa fie in echilibru</h2>
+        <h2>4. Intr-un parc se joaca 3 copii care au greutatile a, b, c. Sa se se stabileasca daca se pot aseza pe un balansoar astfel incat acesta sa fie in echilibru</h2>
+        <form method="post">
+            <button type="submit" name="check_balance" class="aurora-button">Check Balance</button>
+        </form>
+        <?php
+            if (isset($_POST['check_balance'])) {
 
-        <h2 class="aurora">9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
+                $a = rand(20, 100); // Weight of child 1
+                $b = rand(20, 100); // Weight of child 2
+                $c = rand(41, 100); // Weight of child 3
+
+                echo "<p>The weights of children a = $a kilograms.</p>";
+                echo "<p>The weights of children b = $b kilograms.</p>";
+                echo "<p>The weights of children c = $c kilograms.</p>";
+
+                // Check if any two children can balance the seesaw
+                if ($a + $b == $c) {
+                    echo "<p>The children can balance the seesaw. Children with weight a = $a kilograms and children with weight b = $b kilograms can be put on one side, and child c = $c kilograms who weighs the same as both of them together is put on the other side.</p>";
+                } elseif ($a + $c == $b) {
+                    echo "<p>The children can balance the seesaw. Children with weight a = $a kilograms and children with weight c = $c kilograms can be put on one side, and child b = $b kilograms who weighs the same as both of them together is put on the other side.</p>";
+                } elseif ($b + $c == $a) {
+                    echo "<p>The children can balance the seesaw. Children with weight b = $b kilograms and children with weight c = $c kilograms can be put on one side, and child a = $a kilograms who weighs the same as both of them together is put on the other side.</p>";
+                } else {
+                    echo "<p>The children cannot balance the seesaw.</p>";
+                }
+            }
+            if (isset($_POST['check_balance'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
         <form method="post">
             <button type="submit" name="check_divisibility" class="aurora-button">Check Divisibility</button>
         </form>
@@ -174,7 +206,7 @@
                     echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
                 }
             ?>
-                    <h2>12. Scrieti un algoritm care sa determine minimul dintre doua numere.</h2>
+        <h2>12. Scrieti un algoritm care sa determine minimul dintre doua numere.</h2>
         <form method="post">
             <button type="submit" name="find_min" class="aurora-button">Find Min</button>
         </form>
