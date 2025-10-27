@@ -75,6 +75,53 @@
 
         ?>
 
+        <h2>3. Scrieti un algoritm care sa determine maximul dintre trei numere</h2>
+        <form method="post">
+            <button type="submit" name="find_max_of_three" class="aurora-button">Check max of Three Numbers</button>
+        </form>
+        <?php
+        
+        if (isset($_POST['find_max_of_three'])) {
+
+            $num1 = rand(0, 100);
+            $num2 = rand(0, 100);
+            $num3 = rand(0, 100);
+            echo "<p>Generated numbers: $num1, $num2, and $num3</p>";
+
+            if ($num1 >= $num2 && $num1 >= $num3) {
+                echo "<p>The maximum number is $num1.</p>";
+            } elseif ($num2 >= $num1 && $num2 >= $num3) {
+                echo "<p>The maximum number is $num2.</p>";
+            } else {
+                echo "<p>The maximum number is $num3.</p>";
+            }
+        }
+            if (isset($_POST['find_max_of_three'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+            ?>
+
+        <h2>9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
+        <form method="post">
+            <button type="submit" name="check_divisibility" class="aurora-button">Check Divisibility</button>
+        </form>
+        <?php
+            if (isset($_POST['check_divisibility'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number % 3 == 0 && $number % 5 == 0) {
+                    echo "<p>The number $number is divisible by both 3 and 5.</p>";
+                } else {
+                    echo "<p>The number $number is not divisible by both 3 and 5.</p>";
+                }
+            }
+
+            if (isset($_POST['check_divisibility'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }   
+        ?>
 
         <h2>10. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv, negativ sau zero.</h2>
         <form method="post">
