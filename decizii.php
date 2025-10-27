@@ -163,27 +163,6 @@
             }
         ?>
         
-        <h2>30. Sa se verifice daca un numar generat cu functia rand(1, 100) este intre 20 si 80.</h2>
-        <form method="post">
-            <button type="submit" name="check_between_20_and_80" class="aurora-button">Check Between 20 and 80</button>
-        </form>
-        <?php
-            if (isset($_POST['check_between_20_and_80'])) {
-
-                $number = rand(1, 100);
-                echo "<p>Generated number: $number</p>";
-
-                if ($number >= 20 && $number <= 80) {
-                    echo "<p>The number $number is between 20 and 80.</p>";
-                } else {
-                    echo "<p>The number $number is not between 20 and 80.</p>";
-                }
-            }
-
-            if (isset($_POST['check_between_20_and_80'])) {
-                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
-            }   
-        ?>
         <h2>6. Sa se verifice daca un numar generat cu functia rand(1, 10) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_10" class="aurora-button">Check Parity (1-10)</button>
@@ -217,7 +196,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>7. Programul ce afiseaza un calificativ in functie de nota unui student. Nota va fi setata in variabila: 1-4 insuficient; 5-6 suficient; 7-8 bine; 9-10 foarte bine(bursier)</h2>
+        <h2>7. Programul ce afiseaza un calificativ in functie de nota unui student. Nota va fi setata in variabila: 1-4 insuficient; 5-6 suficient;7-8 bine; 9-10 foarte bine(bursier)</h2>
         <form method="post">
             <button type="submit" name="check_grade" class="aurora-button">Check Grade</button>
         </form>
@@ -236,7 +215,6 @@
                 } elseif ($grade == 9 || $grade == 10) {
                     echo "<p>Calificativ: Foarte bine (bursier)</p>";
                 }
-            
                 switch ($grade) {
                     case 1:
                     case 2:
@@ -254,14 +232,110 @@
                         break;
                     case 9:
                     case 10:
-                        echo "<p>Calificativ: Foarte bine (bursier). Studentul cu nota $grade a promovat cu brio si dovedeste ca stapaneste materia in intregime.</p>";
+                        echo "<p>Calificativ: Foarte bine (bursier). Studentul cu nota $grade a promovat cu brio si dovedeste ca stapaneste foarte bine materia.</p>";
                         break;
                     default:
                         echo "<p>Nota invalida.</p>";
                         break;
                 }
             }
+
             if (isset($_POST['check_grade'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>8. Scrieti un program care va afisa "Azi este ziua! Va doresc o dimineata cat mai placuta in continuare". Unde ziua va fi o variabila care va contine ziua curenta (ex: Luni, Marti, Miercuri, Joi etc.).</h2>
+        <form method="post">
+            <button type="submit" name="display_day_message" class="aurora-button">Display Day Message</button>
+        </form>
+        <?php
+            if (isset($_POST['display_day_message'])) {
+
+                $days = ['Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata', 'Duminica'];
+                $current_day = $days[array_rand($days)];
+                echo "<p>Azi este $current_day! Va doresc o dimineata cat mai placuta in continuare.</p>";
+                switch (array_search($current_day, $days)) {
+                    case 0:
+                        echo "<p>Azi este Luni! Va doresc o dimineata si o saptamana cat mai placute in continuare.</p>";
+                        break;
+                    case 1:
+                        echo "<p>Azi este Marti! Va doresc o dimineata cat mai placuta in continuare, ati intrat in paine.</p>";
+                        break;
+                    case 2:
+                        echo "<p>Azi este Miercuri! Va doresc o dimineata si o saptamana cat mai usoare si placute in continuare.</p>";
+                        break;
+                    case 3:
+                        echo "<p>Azi este Joi! Va doresc o dimineata cat mai placuta in continuare. Mai este doar o zi pana la sfarsitul de saptamana</p>";
+                        break;
+                    case 4:
+                        echo "<p>Azi este Vineri! Va doresc o dimineata cat mai placuta in continuare. Urmeaza o seara foate grozava si de neuitat.</p>";
+                        break;
+                    case 5:
+                        echo "<p>Azi este Sambata! Va doresc o dimineata si un sfarsit de saptamana cat mai placute in continuare. Urmeaza o zi de relaxare si odihna.</p>";
+                        break;
+                    case 6:
+                        echo "<p>Azi este Duminica! Va doresc o dimineata cat mai placuta in continuare. Sper sa aveti o zi de odihna si relaxare bine-meritata.</p>";
+                        break;
+                }
+            }
+
+            if (isset($_POST['display_day_message'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>9. Numar par sau impar maxim.</h2>
+        <form method="post">
+            <button type="submit" name="check_parity_max" class="aurora-button">Check Parity Max</button>
+        </form>
+        <?php
+            if (isset($_POST['check_parity_max'])) {
+
+                $number = rand(1, 1000);
+                $a = rand(1, 1000);
+                $b = rand(1, 1000);
+                echo "<p>Generated number: $number</p>";
+                echo "<p>Generated number a: $a</p>";
+                echo "<p>Generated number b: $b</p>";
+                if ($number % 2 === 0) {
+                    echo "<p>The number $number is even.</p>";
+                } else {
+                    echo "<p>The number $number is odd.</p>";
+                }
+
+                print ($a > $b) ? "<p>Maxim even number: $a" : "Maxim odd number: $b</p>";
+                if(($number + $a) >  ($number + $b)) {
+                    print ($number % 2 === 0) ? "<p>Maxim even number close to the number $a: $number</p>" : "<p>Maxim odd number close to the number $a: $number</p>";
+                } else {
+                    print ($number % 2 === 0) ? "<p>Maxim even number close to the number $b: $number</p>" : "<p>Maxim odd number close to the number $b: $number</p>";
+                }
+                
+            }
+
+            if (isset($_POST['check_parity_max'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>10. Sa se determine daca un utilizator este logat pe site.</h2>
+        <form method="post">
+            <button type="submit" name="check_user_login" class="aurora-button">Check User Login</button>
+        </form>
+        <?php
+            if (isset($_POST['check_user_login'])) {
+
+                // Simulating user login status
+                $is_logged_in = rand(0, 1) ? true : false;
+
+                if ($is_logged_in) {
+                    echo "<p>The user is logged in...</p>";
+                    $user = null ?? 'visitor';
+                    echo "<p>Welcome, $user!</p>";
+                    echo "<p>Your last login was on " . date("Y-m-d H:i:s") . "</p>";
+                } else {
+                    echo "<p>The user is not logged in!</p>";
+                }
+            }
+
+            if (isset($_POST['check_user_login'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
@@ -467,6 +541,28 @@
             if (isset($_POST['check_greater_than_50'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
+        ?>
+        
+        <h2>30. Sa se verifice daca un numar generat cu functia rand(1, 100) este intre 20 si 80.</h2>
+        <form method="post">
+            <button type="submit" name="check_between_20_and_80" class="aurora-button">Check Between 20 and 80</button>
+        </form>
+        <?php
+            if (isset($_POST['check_between_20_and_80'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number >= 20 && $number <= 80) {
+                    echo "<p>The number $number is between 20 and 80.</p>";
+                } else {
+                    echo "<p>The number $number is not between 20 and 80.</p>";
+                }
+            }
+
+            if (isset($_POST['check_between_20_and_80'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }   
         ?>
     </header>
     <main>
