@@ -134,7 +134,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>5. Se citesc varsta $v, inaltimea $h, si sexul $s unei persoane</h2>
+        <h2>5. Se citesc varsta, inaltimea, si sexul unei persoane. Sa se calculeze greutatea optima ideala, dupa formula: $g = 50 + 0.75 * ($i -150) + ($v - 20) / 4 pentru baieti si $g = $g * 0.9 pentru fete</h2>
         <form method="post">
             <button type="submit" name="check_eligibility" class="aurora-button">Check Eligibility</button>
         </form>
@@ -152,13 +152,185 @@
                 } else {
                     echo "<p>The person is not eligible.</p>";
                 }
+                $g = 50 + 0.75 * ($h - 150) + ($v - 20) / 4;
+                if ($s == 'F') {
+                    $g = $g * 0.9;
+                }
+                echo "<p>The ideal weight is: " . round($g, 2) . " kg.</p>";
             }
             if (isset($_POST['check_eligibility'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
+        
+        <h2>30. Sa se verifice daca un numar generat cu functia rand(1, 100) este intre 20 si 80.</h2>
+        <form method="post">
+            <button type="submit" name="check_between_20_and_80" class="aurora-button">Check Between 20 and 80</button>
+        </form>
+        <?php
+            if (isset($_POST['check_between_20_and_80'])) {
 
-        <h2>9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number >= 20 && $number <= 80) {
+                    echo "<p>The number $number is between 20 and 80.</p>";
+                } else {
+                    echo "<p>The number $number is not between 20 and 80.</p>";
+                }
+            }
+
+            if (isset($_POST['check_between_20_and_80'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }   
+        ?>
+        <h2>6. Sa se verifice daca un numar generat cu functia rand(1, 10) este par sau impar.</h2>
+        <form method="post">
+            <button type="submit" name="check_parity_10" class="aurora-button">Check Parity (1-10)</button>
+        </form>
+        <?php
+            if (isset($_POST['check_parity_10'])) {
+
+                $number = rand(1, 10);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number % 2 == 0) {
+                    echo "<p>The number $number is even.</p>";
+                } else {
+                    echo "<p>The number $number is odd.</p>";
+                }
+                switch ($number) {
+                    case 2:
+                    case 4:
+                    case 6:
+                    case 8:
+                    case 10:
+                        echo "<p>The number $number is even.</p>";
+                        break;
+                    default:
+                        echo "<p>The number $number is odd.</p>";
+                        break;
+                }
+            }
+
+            if (isset($_POST['check_parity_10'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>7. Programul ce afiseaza un calificativ in functie de nota unui student. Nota va fi setata in variabila: 1-4 insuficient; 5-6 suficient; 7-8 bine; 9-10 foarte bine(bursier)</h2>
+        <form method="post">
+            <button type="submit" name="check_grade" class="aurora-button">Check Grade</button>
+        </form>
+        <?php
+            if (isset($_POST['check_grade'])) {
+
+                $grade = rand(1, 10);
+                echo "<p>Generated grade: $grade</p>";
+
+                if ($grade >= 1 && $grade <= 4) {
+                    echo "<p>Calificativ: Insuficient</p>";
+                } elseif ($grade >= 5 && $grade <= 6) {
+                    echo "<p>Calificativ: Suficient</p>";
+                } elseif ($grade >= 7 && $grade <= 8) {
+                    echo "<p>Calificativ: Bine</p>";
+                } elseif ($grade == 9 || $grade == 10) {
+                    echo "<p>Calificativ: Foarte bine (bursier)</p>";
+                }
+            
+                switch ($grade) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        echo "<p>Calificativ: Insuficient. Iar cu nota $grade studentul are restanta.</p>";
+                        break;
+                    case 5:
+                    case 6:
+                        echo "<p>Calificativ: Suficient. Studentul cu nota $grade a promovat, dar este rezultat mediuocru.</p>";
+                        break;
+                    case 7:
+                    case 8:
+                        echo "<p>Calificativ: Bine. Studentul cu nota $grade a promovat, rezultatul este unul bun, dar necesita imbunatatiri.</p>";
+                        break;
+                    case 9:
+                    case 10:
+                        echo "<p>Calificativ: Foarte bine (bursier). Studentul cu nota $grade a promovat cu brio si dovedeste ca stapaneste materia in intregime.</p>";
+                        break;
+                    default:
+                        echo "<p>Nota invalida.</p>";
+                        break;
+                }
+            }
+            if (isset($_POST['check_grade'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
+        <form method="post">
+            <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
+        </form>
+        <?php
+            if (isset($_POST['check_parity_100'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number % 2 == 0) {
+                    echo "<p>The number $number is even.</p>";
+                } else {
+                    echo "<p>The number $number is odd.</p>";
+                }
+
+            }
+
+            if (isset($_POST['check_parity_100'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>22. Sa se verifice daca un numar generat cu functia rand(1, 100) este mai mare decat 10 si mai mic decat 50.</h2>
+        <form method="post">
+            <button type="submit" name="check_range_10_50" class="aurora-button">Check Range (10-50)</button>
+        </form>
+        <?php
+            if (isset($_POST['check_range_10_50'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number > 10 && $number < 50) {
+                    echo "<p>The number $number is greater than 10 and less than 50.</p>";
+                } else {
+                    echo "<p>The number $number is not in the range (10, 50).</p>";
+                }
+            }
+
+            if (isset($_POST['check_range_10_50'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }   
+        ?>
+        <h2>23. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 4 sau cu 6.</h2>
+        <form method="post">
+            <button type="submit" name="check_divisibility_4_6" class="aurora-button">Check Divisibility (4 or 6)</button>
+        </form>
+        <?php
+            if (isset($_POST['check_divisibility_4_6'])) {
+
+                $number = rand(1, 100);
+                echo "<p>Generated number: $number</p>";
+
+                if ($number % 4 == 0 || $number % 6 == 0) {
+                    echo "<p>The number $number is divisible by either 4 or 6.</p>";
+                } else {
+                    echo "<p>The number $number is not divisible by either 4 or 6.</p>";
+                }
+            }
+
+            if (isset($_POST['check_divisibility_4_6'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            } 
+        ?>
+
+        <h2>24. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
         <form method="post">
             <button type="submit" name="check_divisibility" class="aurora-button">Check Divisibility</button>
         </form>
@@ -180,7 +352,7 @@
             }   
         ?>
 
-        <h2>10. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv, negativ sau zero.</h2>
+        <h2>25. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv, negativ sau zero.</h2>
         <form method="post">
             <button type="submit" name="check_sign" class="aurora-button">Check Sign</button>
         </form>
@@ -205,7 +377,7 @@
             }
             ?>
 
-            <h2>11. Scrieti un algoritm care sa determine maximul dintre trei numere.</h2>
+            <h2>26. Scrieti un algoritm care sa determine maximul dintre trei numere.</h2>
             <form method="post">
                 <button type="submit" name="find_max_of_three" class="aurora-button">Find Max of Three</button>
             </form>
@@ -230,7 +402,7 @@
                     echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
                 }
             ?>
-        <h2>12. Scrieti un algoritm care sa determine minimul dintre doua numere.</h2>
+        <h2>27. Scrieti un algoritm care sa determine minimul dintre doua numere.</h2>
         <form method="post">
             <button type="submit" name="find_min" class="aurora-button">Find Min</button>
         </form>
@@ -254,7 +426,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>13. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv sau negativ.</h2>
+        <h2>28. Sa se verifice daca un numar generat cu functia rand(1, 100) este pozitiv sau negativ.</h2>
         <form method="post">
             <button type="submit" name="check_positive_negative" class="aurora-button">Check Positive/Negative</button>
         </form>
@@ -275,7 +447,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>14. Sa se verifice daca un numar generat cu functia rand(1, 100) este mai mare decat 50.</h2>
+        <h2>29. Sa se verifice daca un numar generat cu functia rand(1, 100) este mai mare decat 50.</h2>
         <form method="post">
             <button type="submit" name="check_greater_than_50" class="aurora-button">Check Greater Than 50</button>
         </form>
@@ -295,27 +467,6 @@
             if (isset($_POST['check_greater_than_50'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
-        ?>
-        <h2>15. Sa se verifice daca un numar generat cu functia rand(1, 100) este intre 20 si 80.</h2>
-        <form method="post">
-            <button type="submit" name="check_between_20_and_80" class="aurora-button">Check Between 20 and 80</button>
-        </form>
-        <?php
-            if (isset($_POST['check_between_20_and_80'])) {
-
-                $number = rand(1, 100);
-                echo "<p>Generated number: $number</p>";
-
-                if ($number >= 20 && $number <= 80) {
-                    echo "<p>The number $number is between 20 and 80.</p>";
-                } else {
-                    echo "<p>The number $number is not between 20 and 80.</p>";
-                }
-            }
-
-            if (isset($_POST['check_between_20_and_80'])) {
-                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
-            }   
         ?>
     </header>
     <main>
