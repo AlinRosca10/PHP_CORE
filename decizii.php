@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="decizii_icon/decision_icon.png">
     <link rel="stylesheet" href="decizii_style/style.css">
 </head>
-<body>
+<body onload="window.scrollTo(0, localStorage.getItem('scroll') || 0)" onscroll="localStorage.setItem('scroll', window.scrollY)">
     <header class="aurora-input aurora">
         <h1>PHP Decision Making</h1>
         <h2>1. Sa se verifice daca un numar generat cu functia rand(1, 30) este par sau impar.</h2>
@@ -134,6 +134,30 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
+        <h2>5. Se citesc varsta $v, inaltimea $h, si sexul $s unei persoane</h2>
+        <form method="post">
+            <button type="submit" name="check_eligibility" class="aurora-button">Check Eligibility</button>
+        </form>
+        <?php
+            if (isset($_POST['check_eligibility'])) {
+
+                $v = rand(10, 30); // Age
+                $h = rand(140, 220); // Height in cm
+                $s = rand(0, 1) ? 'M' : 'F'; // Sex
+                echo "<p>Age: $v years</p>";
+                echo "<p>Height: $h cm</p>";
+                echo "<p>Sex: $s</p>";
+                if (($s == 'M' && $v >= 18 && $h >= 180) || ($s == 'F' && $v >= 18 && $h >= 175)) {
+                    echo "<p>The person is eligible in terms of age, height and sex.</p>";
+                } else {
+                    echo "<p>The person is not eligible.</p>";
+                }
+            }
+            if (isset($_POST['check_eligibility'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+
         <h2>9. Sa se verifice daca un numar generat cu functia rand(1, 100) este divizibil cu 3 si 5.</h2>
         <form method="post">
             <button type="submit" name="check_divisibility" class="aurora-button">Check Divisibility</button>
