@@ -339,6 +339,691 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
+        <h2>11. Folosind cele 3 structuri repetitive: while, do while, for, sa se afisseze primele 15 numere</h2>
+        <form method="post">
+            <button type="submit" name="display_first_15_numbers" class="aurora-button">Display First 15 Numbers</button>
+        </form>
+        <?php
+            if (isset($_POST['display_first_15_numbers'])) {
+
+                echo "<h3>Using for loop:</h3>";
+                echo "<p>";
+                for ($i = 1; $i <= 15; $i++) {
+                    echo $i . " ";
+                }
+                echo "</p>";
+
+                echo "<h3>Using while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                while ($i <= 15) {
+                    echo $i . " ";
+                    $i++;
+                }
+                echo "</p>";
+
+                echo "<h3>Using do-while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                do {
+                    echo $i . " ";
+                    $i++;
+                } while ($i <= 15);
+                echo "</p>";
+            }
+
+            if (isset($_POST['display_first_15_numbers'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }  
+        ?>
+        
+        <h2>12.a) Folosind continue si o structura repetitiva saa se afiseza doar numere impare pana la 15.</h2>
+        <form method="post">
+            <button type="submit" name="display_odd_numbers_up_to_15" class="aurora-button">Display Odd Numbers Up to 15</button>
+        </form>
+        <?php
+            if (isset($_POST['display_odd_numbers_up_to_15'])) {
+
+                echo "<h3>Using for loop:</h3>";
+                echo "<p>";
+                for ($i = 1; $i <= 15; $i++) {
+                    if ($i % 2 == 0) {
+                        continue;
+                    }
+                    echo $i . " ";
+                }
+                echo "</p>";
+
+                echo "<h3>Using while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                while ($i <= 15) {
+                    if ($i % 2 == 0) {
+                        $i++;
+                        continue;
+                    }
+                    echo $i . " ";
+                    $i++;
+                }
+                echo "</p>";
+
+                echo "<h3>Using do-while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                do {
+                    if ($i % 2 == 0) {
+                        $i++;
+                        continue;
+                    }
+                    echo $i . " ";
+                    $i++;
+                } while ($i <= 15);
+                echo "</p>";
+            }
+
+            if (isset($_POST['display_odd_numbers_up_to_15'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>12.b) Folosind break si o structura repetitiva sa se afiseze numerele pana la 15.</h2>
+        <form method="post">
+            <button type="submit" name="display_numbers_with_break" class="aurora-button">Display Numbers with Break</button>
+        </form>
+        <?php
+            if (isset($_POST['display_numbers_with_break'])) {
+
+                echo "<h3>Using for loop:</h3>";
+                echo "<p>";
+                for ($i = 1; $i <= 15; $i++) {
+                    if ($i > 10) {
+                        break;
+                    }
+                    echo $i . " ";
+                }
+                echo "</p>";
+
+                echo "<h3>Using while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                while ($i <= 15) {
+                    if ($i > 10) {
+                        break;
+                    }
+                    echo $i . " ";
+                    $i++;
+                }
+                echo "</p>";
+
+                echo "<h3>Using do-while loop:</h3>";
+                echo "<p>";
+                $i = 1;
+                do {
+                    if ($i > 10) {
+                        break;
+                    }
+                    echo $i . " ";
+                    $i++;
+                } while ($i <= 15);
+                echo "</p>";
+            }
+
+            if (isset($_POST['display_numbers_with_break'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>13. Sa se programeze un senzor care determina cantitatea de combustibil dintr-un rezervor si afiseaza un mesaj corespunzator. Daca cantitatea de combustibil scade sub 10 litri sa afiseze un mesaj de avertizare cu portocaliu: "Va rog sa alimentati.". Daca cantitatea de combustibil este 1 sa se afiseze mesajul "Ati ramas fara combustibil. Trebuie sa ne oprim."</h2>
+        <form method="post">
+            <button type="submit" name="check_fuel_level" class="aurora-button">Check Fuel Level</button>
+        </form>
+        <?php
+            if (isset($_POST['check_fuel_level'])) {
+
+                $maximum_fuel = 50; // Maximum fuel capacity in liters
+                $fuel_level = rand(0, $maximum_fuel); // Fuel level in liters
+                echo "<p>Current fuel level: $fuel_level liters</p>";
+
+                if ($fuel_level < 1) {
+                    $background_color = "linear-gradient(90deg, black, darkred, red);";
+                    echo "<p style='color: red;'>You're out of fuel. We have to stop.</p>";
+                    echo "<audio autoplay loop>
+                        <source src='decizii_sound/fuel_alert.mp3' type='audio/mpeg'>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <iframe id='iframeAudio' src='decizii_sound/fuel_alert.mp3' style='display:none' allow='autoplay' width='0' height='0' frameborder='0'></iframe>";
+                    echo "<p style='color: red;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: red;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: red;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                } elseif ($fuel_level < 10) {
+                    $background_color = "linear-gradient(90deg, red, darkorange, orange);";
+                    echo "<p style='color: orange;'>Insufficient fuel quantity. Please refuel.</p>";
+                    echo "<p style='color: orange;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: orange;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: orange;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                } elseif ($fuel_level <= $maximum_fuel * 0.25) {
+                    $background_color = "linear-gradient(90deg, red, orange, yellow);";
+                    echo "<p style='color: yellow;'>The fuel level is sufficient.</p>";
+                    echo "<p style='color: yellow;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: yellow;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: yellow;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                }
+                elseif ($fuel_level <= $maximum_fuel * 0.5) {
+                    $background_color = "linear-gradient(90deg, red, orange, yellow, lightgreen);";
+                    echo "<p style='color: lightgreen;'>The fuel level is good.</p>";
+                    echo "<p style='color: lightgreen;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: lightgreen;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: lightgreen;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                }
+                elseif ($fuel_level <= $maximum_fuel * 0.75) {
+                    $background_color = "linear-gradient(90deg, red, orange, yellow, lightgreen, green);";
+                    echo "<p style='color: green;'>The fuel level is optimal.</p>";
+                    echo "<p style='color: green;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: green;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: green;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                }
+                elseif ($fuel_level <= $maximum_fuel * 0.95) {
+                    $background_color = "linear-gradient(90deg, red, orange, yellow, lightgreen, green, darkgreen);";
+                    echo "<p style='color: darkgreen;'>Atention! The fuel level is almost completely full.</p>";
+                    echo "<p style='color: darkgreen;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: darkgreen;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: darkgreen;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                }
+                else {
+                    $background_color = "linear-gradient(90deg, red, orange, yellow, lightgreen, green, darkgreen, blue);";
+                    echo "<p style='color: blue;'>Risk! The fuel level is overflowing.</p>";
+                    echo "<p style='color: blue;'>Maximum fuel capacity: $maximum_fuel liters</p>";  
+                    echo "<p style='color: blue;'>Fuel level percentage: " . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</p>";
+                    echo "<p style='color: blue;'>Fuel level status: " . ($fuel_level / $maximum_fuel * 100 >= 50 ? 'Sufficient' : 'Insufficient') . "</p>"; 
+                }
+
+                echo "<style>
+                    @keyframes flash {
+                        0% { background-color: red; }
+                        50% { background-color: white; }
+                        100% { background-color: red; }
+                    }
+                    .flash {
+                        animation: flash 3s infinite;
+                    }";
+                if ($fuel_level < 1) {
+                    echo ".flash { animation: flash 0.5s infinite; }";
+                } 
+                echo "</style>";
+
+                echo "<div class='aurora-input'>
+                        <div style='width:" . ($fuel_level / $maximum_fuel * 100) . "%;
+                            color:#191919;
+                            font-weight:bolder;
+                            height:20px;
+                            background:{$background_color};
+                            border-radius:10px;
+                            " . ($fuel_level < 10 ? "animation: flash 5s infinite;" : "") . ">
+                        </div>
+        
+                        <div style='position:absolute; top:5px; left:50%; transform:translateX(-50%); font-weight:bold; color:#000;'>" . round(($fuel_level / $maximum_fuel) * 100, 2) . "%</div>
+                    </div>";
+            }
+
+            if (isset($_POST['check_fuel_level'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>14. Sa se sorteze crescator un sirr de numere</h2>
+        <form method="post">
+            <button type="submit" name="sort_numbers" class="aurora-button">Sort Numbers</button>
+        </form>
+        <?php
+            if (isset($_POST['sort_numbers'])) {
+
+                // Generate an array of 20 random numbers between 1 and 200
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+
+                // Sort the array in ascending order
+                sort($numbers);
+                echo "<p>Sorted numbers (ascending) using sort(): " . implode(", ", $numbers) . "</p>";
+
+                // Sort the array in descending order
+                rsort($numbers);
+                echo "<p>Sorted numbers (descending) using rsort(): " . implode(", ", $numbers) . "</p>";
+
+                // Custom sorting using usort
+                usort($numbers, function($a, $b) {
+                    return $a - $b;
+                });
+                echo "<p>Sorted numbers (ascending) using usort(): " . implode(", ", $numbers) . "</p>";    
+
+                // Custom sorting in descending order using usort
+                usort($numbers, function($a, $b) {
+                    return $b - $a;
+                });
+                echo "<p>Sorted numbers (descending) using usort(): " . implode(", ", $numbers) . "</p>";  
+
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+
+                // Bubble sort in ascending order using nested loops
+                for ($i = 0; $i < count($numbers) - 1; $i++) {
+                    for ($j = 0; $j < count($numbers) - $i - 1; $j++) {
+                        if ($numbers[$j] > $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                    }
+                }
+                echo "<p>Sorted numbers (ascending) using Bubble Sort: " . implode(", ", $numbers) . "</p>";
+                
+                // Bubble sort in descending order using nested loops
+                for ($i = 0; $i < count($numbers) - 1; $i++) {
+                    for ($j = 0; $j < count($numbers) - $i - 1; $j++) {
+                        if ($numbers[$j] < $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                    }
+                }
+                echo "<p>Sorted numbers (descending) using Bubble Sort: " . implode(", ", $numbers) . "</p>";   
+
+                // Insertion sort in ascending order
+                for ($i = 1; $i < count($numbers); $i++) {
+                    $key = $numbers[$i];
+                    $j = $i - 1;
+                    while ($j >= 0 && $numbers[$j] > $key) {
+                        $numbers[$j + 1] = $numbers[$j];
+                        $j--;
+                    }
+                    $numbers[$j + 1] = $key;
+                }
+                echo "<p>Sorted numbers (ascending) using Insertion Sort: " . implode(", ", $numbers) . "</p>";
+                
+                // Insertion sort in descending order
+                for ($i = 1; $i < count($numbers); $i++) {
+                    $key = $numbers[$i];
+                    $j = $i - 1;
+                    while ($j >= 0 && $numbers[$j] < $key) {
+                        $numbers[$j + 1] = $numbers[$j];
+                        $j--;
+                    }
+                    $numbers[$j + 1] = $key;
+                }
+                echo "<p>Sorted numbers (descending) using Insertion Sort: " . implode(", ", $numbers) . "</p>";
+            
+                // Selection sort in ascending order
+                for ($i = 0; $i < count($numbers) - 1; $i++) {
+                    $min_index = $i;
+                    for ($j = $i + 1; $j < count($numbers); $j++) {
+                        if ($numbers[$j] < $numbers[$min_index]) {
+                            $min_index = $j;
+                        }
+                    }
+                    // Swap
+                    $temp = $numbers[$i];
+                    $numbers[$i] = $numbers[$min_index];
+                    $numbers[$min_index] = $temp;
+                }
+                echo "<p>Sorted numbers (ascending) using Selection Sort: " . implode(", ", $numbers) . "</p>";
+                
+                // Selection sort in descending order
+                for ($i = 0; $i < count($numbers) - 1; $i++) {
+                    $max_index = $i;
+                    for ($j = $i + 1; $j < count($numbers); $j++) {
+                        if ($numbers[$j] > $numbers[$max_index]) {
+                            $max_index = $j;
+                        }
+                    }
+                    // Swap
+                    $temp = $numbers[$i];
+                    $numbers[$i] = $numbers[$max_index];
+                    $numbers[$max_index] = $temp;
+                }
+                echo "<p>Sorted numbers (descending) using Selection Sort: " . implode(", ", $numbers) . "</p>";
+                
+                // Generate a new array of random numbers for merge sort
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                
+                // Merge sort function
+                function merge_sort($array) {
+                    if (count($array) <= 1) {
+                        return $array;
+                    }
+                    $mid = floor(count($array) / 2);
+                    $left = array_slice($array, 0, $mid);
+                    $right = array_slice($array, $mid);
+                    return merge(merge_sort($left), merge_sort($right));
+                }
+                function merge($left, $right) {
+                    $result = [];
+                    while (count($left) > 0 && count($right) > 0) {
+                        if ($left[0] <= $right[0]) {
+                            $result[] = array_shift($left);
+                        } else {
+                            $result[] = array_shift($right);
+                        }
+                    }
+                    return array_merge($result, $left, $right);
+                }
+                $sorted_numbers = merge_sort($numbers);
+                echo "<p>Sorted numbers (ascending) using Merge Sort: " . implode(", ", $sorted_numbers) . "</p>";
+
+                // Merge sort in descending order
+                function merge_sort_desc($array) {
+                    if (count($array) <= 1) {
+                        return $array;
+                    }
+                    $mid = floor(count($array) / 2);
+                    $left = array_slice($array, 0, $mid);
+                    $right = array_slice($array, $mid);
+                    return merge_desc(merge_sort_desc($left), merge_sort_desc($right));
+                }
+                function merge_desc($left, $right) {
+                    $result = [];
+                    while (count($left) > 0 && count($right) > 0) {
+                        if ($left[0] >= $right[0]) {
+                            $result[] = array_shift($left);
+                        } else {
+                            $result[] = array_shift($right);
+                        }
+                    }
+                    return array_merge($result, $left, $right);
+                }
+
+                $sorted_numbers_desc = merge_sort_desc($numbers);
+                echo "<p>Sorted numbers (descending) using Merge Sort: " . implode(", ", $sorted_numbers_desc) . "</p>";
+                
+                // Generate a new array of random numbers for quick sort
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                
+                // Quick sort function
+                function quick_sort($array) {
+                    if (count($array) <= 1) {
+                        return $array;
+                    }
+                    $pivot = $array[0];
+                    $left = [];
+                    $right = [];
+                    for ($i = 1; $i < count($array); $i++) {
+                        if ($array[$i] <= $pivot) {
+                            $left[] = $array[$i];
+                        } else {
+                            $right[] = $array[$i];
+                        }
+                    }
+                    return array_merge(quick_sort($left), [$pivot], quick_sort($right));
+                }   
+                $sorted_numbers_quick = quick_sort($numbers);
+                echo "<p>Sorted numbers (ascending) using Quick Sort: " . implode(", ", $sorted_numbers_quick) . "</p>";
+                
+                // Quick sort in descending order
+                function quick_sort_desc($array) {
+                    if (count($array) <= 1) {
+                        return $array;
+                    }
+                    $pivot = $array[0];
+                    $left = [];
+                    $right = [];
+                    for ($i = 1; $i < count($array); $i++) {
+                        if ($array[$i] >= $pivot) {
+                            $left[] = $array[$i];
+                        } else {
+                            $right[] = $array[$i];
+                        }
+                    }
+                    return array_merge(quick_sort_desc($left), [$pivot], quick_sort_desc($right));
+                }
+                $sorted_numbers_quick_desc = quick_sort_desc($numbers);
+                echo "<p>Sorted numbers (descending) using Quick Sort: " . implode(", ", $sorted_numbers_quick_desc) . "</p>";
+
+                // Using array_multisort to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $numbers_copy = $numbers;
+                array_multisort($numbers_copy, SORT_ASC, $numbers);
+                echo "<p>Sorted numbers (ascending) using array_multisort(): " . implode(", ", $numbers) . "</p>";
+                
+                // Using array_multisort to sort in descending order
+                $numbers_copy = $numbers;
+                array_multisort($numbers_copy, SORT_DESC, $numbers);
+                echo "<p>Sorted numbers (descending) using array_multisort(): " . implode(", ", $numbers) . "</p>";
+                
+                // Using array_map with sort
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $sorted_numbers_map = array_map(null, $numbers);
+                sort($sorted_numbers_map);
+                echo "<p>Sorted numbers (ascending) using array_map with sort(): " . implode(", ", $sorted_numbers_map) . "</p>";
+                rsort($sorted_numbers_map);
+                echo "<p>Sorted numbers (descending) using array_map with rsort(): " . implode(", ", $sorted_numbers_map) . "</p>";
+        
+                // Using array_reduce to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $sorted_numbers_reduce = array_reduce($numbers, function($carry, $item) {
+                    $carry[] = $item;
+                    sort($carry);
+                    return $carry;
+                }, []);
+                echo "<p>Sorted numbers (ascending) using array_reduce(): " . implode(", ", $sorted_numbers_reduce) . "</p>";
+                
+                rsort($sorted_numbers_reduce);
+
+                echo "<p>Sorted numbers (descending) using array_reduce(): " . implode(", ", $sorted_numbers_reduce) . "</p>";
+
+                // Using array_filter to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $sorted_numbers_filter = array_filter($numbers, function($item) {
+                    return true; // Just return all items
+                });
+                sort($sorted_numbers_filter);
+                echo "<p>Sorted numbers (ascending) using array_filter(): " . implode(", ", $sorted_numbers_filter) . "</p>";
+                rsort($sorted_numbers_filter);
+                echo "<p>Sorted numbers (descending) using array_filter(): " . implode(", ", $sorted_numbers_filter) . "</p>";
+                
+                // Using array_slice to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $numbers_slice = array_slice($numbers, 0);
+                sort($numbers_slice);
+                echo "<p>Sorted numbers (ascending) using array_slice(): " . implode(", ",$numbers_slice) . "</p>";
+                rsort($numbers_slice);
+                echo "<p>Sorted numbers (descending) using array_slice(): " . implode(", ", $numbers_slice) . "</p>";
+
+                //Using do while to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $n = count($numbers);
+                $i = 0;
+                do {
+                    $j = 0;
+                    do {
+                        if ($numbers[$j] > $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                        $j++;
+                    } while ($j < $n - $i - 1);
+                    $i++;
+                } while ($i < $n - 1);
+                echo "<p>Sorted numbers (ascending) using do-while Bubble Sort: " . implode(", ", $numbers) . "</p>";
+                //Using do while to sort in descending order
+                $n = count($numbers);
+                $i = 0;
+                do {
+                    $j = 0;
+                    do {
+                        if ($numbers[$j] < $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                        $j++;
+                    } while ($j < $n - $i - 1);
+                    $i++;
+                } while ($i < $n - 1);
+                echo "<p>Sorted numbers (descending) using do-while Bubble Sort: " . implode(", ", $numbers) . "</p>";
+
+                //Using while to sort in ascending order
+                $numbers = [];
+                for ($i = 0; $i < 20; $i++) {
+                    $numbers[] = rand(1, 200);
+                }
+                echo "<p>Generated numbers: " . implode(", ", $numbers) . "</p>";
+                $n = count($numbers);
+                $i = 0;
+                while ($i < $n - 1) {
+                    $j = 0;
+                    while ($j < $n - $i - 1) {
+                        if ($numbers[$j] > $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                        $j++;
+                    }
+                    $i++;
+                }
+                echo "<p>Sorted numbers (ascending) using while Bubble Sort: " . implode(", ", $numbers) . "</p>";
+                //Using while to sort in descending order
+                $n = count($numbers);
+                $i = 0;
+                while ($i < $n - 1) {
+                    $j = 0;
+                    while ($j < $n - $i - 1) {
+                        if ($numbers[$j] < $numbers[$j + 1]) {
+                            // Swap
+                            $temp = $numbers[$j];
+                            $numbers[$j] = $numbers[$j + 1];
+                            $numbers[$j + 1] = $temp;
+                        }
+                        $j++;
+                    }
+                    $i++;
+                }
+                echo "<p>Sorted numbers (descending) using while Bubble Sort: " . implode(", ", $numbers) . "</p>";
+            }
+
+            if (isset($_POST['sort_numbers'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+        <h2>15. Sa se interschimbe continutul a doua variabile</h2>
+        <form method="post">
+            <button type="submit" name="swap_variables" class="aurora-button">Swap Variables</button>
+        </form>
+        <?php
+            if (isset($_POST['swap_variables'])) {
+
+                $a = rand(1, 100);
+                $b = rand(1, 100);
+                echo "<p>Before swapping: a = $a, b = $b</p>";
+
+                // Swapping using a temporary variable
+                $temp = $a;
+                $a = $b;
+                $b = $temp;
+                echo "<p>After swapping using temporary variable: a = $a, b = $b</p>";
+
+                // Swapping without using a temporary variable
+                $a = $a + $b;
+                $b = $a - $b;
+                $a = $a - $b;
+                echo "<p>After swapping without using temporary variable: a = $a, b = $b</p>";
+
+                // Swapping using list() function
+                list($a, $b) = array($b, $a);
+                echo "<p>After swapping using list() function: a = $a, b = $b</p>";
+
+                // Swapping using XOR bitwise operator
+                $a = $a ^ $b;
+                $b = $a ^ $b;
+                $a = $a ^ $b;
+                echo "<p>After swapping using XOR bitwise operator: a = $a, b = $b</p>";
+
+                // Swapping using array destructuring (PHP 7.1+)
+                [$a, $b] = [$b, $a];
+                echo "<p>After swapping using array destructuring: a = $a, b = $b</p>";
+
+                // Swapping using multiplication and division
+                if ($b != 0) { // Avoid division by zero
+                    $a = $a * $b;
+                    $b = $a / $b;
+                    $a = $a / $b;
+                    echo "<p>After swapping using multiplication and division: a = $a, b = $b</p>";
+                } else {
+                    echo "<p>Cannot swap using multiplication and division as b is zero.</p>";
+                }
+
+                // Swapping using array functions
+                $arr = [$a, $b];
+                $arr = array_reverse($arr);
+                $a = $arr[0];
+                $b = $arr[1];
+                echo "<p>After swapping using array functions: a = $a, b = $b</p>";
+
+                // Swapping using references
+                function swap_by_reference(&$x, &$y) {
+                    $temp = $x;
+                    $x = $y;
+                    $y = $temp;
+                }
+                swap_by_reference($a, $b);
+                echo "<p>After swapping using references: a = $a, b = $b</p>";
+
+                // Swapping using eval() function
+                eval('$temp = $a; $a = $b; $b = $temp;');
+                echo "<p>After swapping using eval() function: a = $a, b = $b</p>";
+
+                // Swapping using array_map
+                list($a, $b) = array_map(null, [$b, $a]);   
+                echo "<p>After swapping using array_map: a = $a, b = $b</p>";
+            }
+
+            if (isset($_POST['swap_variables'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+
+        
+        
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
