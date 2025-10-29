@@ -1110,7 +1110,44 @@
             if (isset($_POST['calculate_multiple_savings'])) {
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
-    ?>
+        ?>
+        <h2>17. 100 de sportivi, cu numere de concurs consecutive de la 1 la 100, participaa la un concurs de incot.Distribuiti automat cate 6 sportivi, in echipe, astfel incat echipa incompleta va inota ultima.</h2>
+        <form method="post">
+            <button type="submit" name="distribute_teams" class="aurora-button">Distribute Teams</button>
+        </form>
+        <?php
+            if (isset($_POST['distribute_teams'])) {
+
+                $num_sportivi = 100;
+                $team_size = 6;
+                $teams = [];
+                $current_team = [];
+
+                for ($i = 1; $i <= $num_sportivi; $i++) {
+                    $current_team[] = $i;
+
+                    if (count($current_team) == $team_size) {
+                        $teams[] = $current_team;
+                        $current_team = [];
+                    }
+                }
+
+                // Add remaining sportivi to the last team if any
+                if (count($current_team) > 0) {
+                    $teams[] = $current_team;
+                }
+
+                // Display teams
+                foreach ($teams as $index => $team) {
+                    echo "<p>Team " . ($index + 1) . ": " . implode(", ", $team) . "</p>";
+                }
+            }
+
+            if (isset($_POST['distribute_teams'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }    
+        ?>
+        
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
