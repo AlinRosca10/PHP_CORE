@@ -567,7 +567,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>14. Sa se sorteze crescator un sirr de numere</h2>
+        <h2>14. Sa se sorteze crescator un sir de numere</h2>
         <form method="post">
             <button type="submit" name="sort_numbers" class="aurora-button">Sort Numbers</button>
         </form>
@@ -949,6 +949,7 @@
         <form method="post">
             <button type="submit" name="swap_variables" class="aurora-button">Swap Variables</button>
         </form>
+
         <?php
             if (isset($_POST['swap_variables'])) {
 
@@ -1021,9 +1022,48 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
+        <h2>16. Dorel doreste sa cumpere 2 produse online. Insa fiecare dintre cele 2 produse sunt in doua variante de pret (2 magazine diferite). Cunoscandu-se cele 2 preturi pentru fiecare prosus, sa se afiseze cat ar economisi Ionel, daca ar cumpara produsele cele mai ieftine.</h2>
+        <form method="post">
+            <button type="submit" name="calculate_savings" class="aurora-button">Calculate Savings</button>
+        </form>
+        <?php
+            if (isset($_POST['calculate_savings'])) {
 
-        
-        
+                // Generate random prices for the two products in two different stores
+                $product1_store1 = rand(50, 2000);
+                $product1_store2 = rand(50, 2000);
+                $product2_store1 = rand(50, 2000);
+                $product2_store2 = rand(50, 2000);
+
+                echo "<p>Product 1 prices: Store 1 = $product1_store1 $, Store 2 = $product1_store2 $</p>";
+                echo "<p>Product 2 prices: Store 1 = $product2_store1 $, Store 2 = $product2_store2 $</p>";
+
+                // Determine the cheapest prices for each product
+                $cheapest_product1 = min($product1_store1, $product1_store2);
+                $cheapest_product2 = min($product2_store1, $product2_store2);
+                echo "<p>Cheapest price for Product 1: " . number_format($cheapest_product1, 2) . " $</p>";
+                echo "<p>Cheapest price for Product 2: " . number_format($cheapest_product2, 2) . " $</p>";
+
+                // Calculate total cost when buying from cheapest options
+                $total_cheapest = $cheapest_product1 + $cheapest_product2;
+
+                // Calculate total cost when buying from most expensive options
+                $most_expensive_product1 = max($product1_store1, $product1_store2);
+                $most_expensive_product2 = max($product2_store1, $product2_store2);
+                $total_most_expensive = $most_expensive_product1 + $most_expensive_product2;
+
+                // Calculate savings
+                $savings = $total_most_expensive - $total_cheapest;
+
+                echo "<p>Total cost when buying cheapest options: " . number_format($total_cheapest, 2) . "$</p>";
+                echo "<p>Total cost when buying most expensive options: " . number_format($total_most_expensive, 2) . "$</p>";
+                echo "<p>Ionel would save: " . number_format($savings, 2) . "$ by buying the cheapest options.</p>";
+            }
+
+            if (isset($_POST['calculate_savings'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+            ?>
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
