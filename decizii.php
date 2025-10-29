@@ -1022,7 +1022,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>16. Dorel doreste sa cumpere 2 produse online. Insa fiecare dintre cele 2 produse sunt in doua variante de pret (2 magazine diferite). Cunoscandu-se cele 2 preturi pentru fiecare prosus, sa se afiseze cat ar economisi Ionel, daca ar cumpara produsele cele mai ieftine.</h2>
+        <h2>16.a Dorel doreste sa cumpere 2 produse online. Insa fiecare dintre cele 2 produse sunt in doua variante de pret (2 magazine diferite). Cunoscandu-se cele 2 preturi pentru fiecare prosus, sa se afiseze cat ar economisi Ionel, daca ar cumpara produsele cele mai ieftine.</h2>
         <form method="post">
             <button type="submit" name="calculate_savings" class="aurora-button">Calculate Savings</button>
         </form>
@@ -1064,6 +1064,53 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
             ?>
+            <h2>16.b Determinarea minimulul a mai multor produse aflate in magazine diferite. Economia rezultata precum si media pretului produsului.</h2>
+        <form method="post">
+            <button type="submit" name="calculate_multiple_savings" class="aurora-button">Calculate Multiple Savings</button>
+        </form>
+        <?php
+            if (isset($_POST['calculate_multiple_savings'])) {
+
+                $num_products = rand(1, 100); // Random number of products between 1 and 100
+                $total_cheapest = 0;
+                $total_most_expensive = 0;
+
+                echo "<p>Number of products: $num_products</p>";
+
+                for ($i = 1; $i <= $num_products; $i++) {
+                    // Generate random prices for each product in two different stores
+                    $price_store1 = rand(50, 2000);
+                    $price_store2 = rand(50, 2000);
+                    $price_store3 = rand(50, 2000);
+                    $price_store4 = rand(50, 2000);
+
+                    echo "<p>Product $i prices: Store 1 = $price_store1 $, Store 2 = $price_store2 $, Store 3 = $price_store3 $, Store 4 = $price_store4 $</p>";
+
+                    // Determine the cheapest and most expensive prices for each product
+                    $cheapest_price = min($price_store1, $price_store2, $price_store3, $price_store4);
+                    $most_expensive = max($price_store1, $price_store2, $price_store3, $price_store4);
+
+                    // Accumulate totals
+                    $total_cheapest += $cheapest_price;
+                    $total_most_expensive += $most_expensive_price;
+                }
+
+                // Calculate savings
+                $savings = $total_most_expensive - $total_cheapest;
+
+                // Calculate average price of the cheapest products
+                $average_price = $total_cheapest / $num_products;
+
+                echo "<p>Total cost when buying cheapest options: " . number_format($total_cheapest, 2) . "$</p>";
+                echo "<p>Total cost when buying most expensive options: " . number_format($total_most_expensive, 2) . "$</p>";
+                echo "<p>Ionel would save: " . number_format($savings, 2) . "$ by buying the cheapest options.</p>";
+                echo "<p>Average price of the cheapest products: " . number_format($average_price, 2) . "$</p>";
+            }
+
+            if (isset($_POST['calculate_multiple_savings'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+    ?>
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
