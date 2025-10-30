@@ -1064,7 +1064,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
             ?>
-            <h2>16.b Determinarea minimulul a mai multor produse aflate in magazine diferite. Economia rezultata precum si media pretului produsului.</h2>
+        <h2>16.b Determinarea minimulul a mai multor produse aflate in magazine diferite. Economia rezultata precum si media pretului produsului.</h2>
         <form method="post">
             <button type="submit" name="calculate_multiple_savings" class="aurora-button">Calculate Multiple Savings</button>
         </form>
@@ -1111,7 +1111,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
-        <h2>17. 100 de sportivi, cu numere de concurs consecutive de la 1 la 100, participaa la un concurs de incot.Distribuiti automat cate 6 sportivi, in echipe, astfel incat echipa incompleta va inota ultima.</h2>
+        <h2>17. 100 de sportivi, cu numere de concurs consecutive de la 1 la 100, participa la un concurs de incot.Distribuiti automat cate 6 sportivi, in echipe, astfel incat echipa incompleta va inota ultima.</h2>
         <form method="post">
             <button type="submit" name="distribute_teams" class="aurora-button">Distribute Teams</button>
         </form>
@@ -1147,7 +1147,171 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }    
         ?>
-        
+       <h2>18. Calculator: Operații între două numere reale (cu $_GET și $_POST)</h2>
+
+        <!-- Formular principal (POST) -->
+        <form id="calcForm" method="post">
+            <label for="num1" class="aurora-label">Number 1:</label>
+            <input type="number" step="any" name="num1" required class="aurora-input"
+                value="<?= isset($_POST['num1']) ? htmlspecialchars($_POST['num1']) : '' ?>">
+
+            <label for="num2" class="aurora-label">Number 2:</label>
+            <input type="number" step="any" name="num2" required class="aurora-input"
+                value="<?= isset($_POST['num2']) ? htmlspecialchars($_POST['num2']) : '' ?>">
+
+            <label for="operation" class="aurora-label">Operation:</label>
+            <select name="operation" required class="aurora-select">
+                <?php
+                $operations = [
+                    'sum' => 'Sum (+)',
+                    'difference' => 'Difference (-)',
+                    'product' => 'Product (×)',
+                    'quotient' => 'Quotient (÷ integer)',
+                    'modulus' => 'Modulus (%)',
+                    'division' => 'Division (÷)',
+                    'power' => 'Power (xʸ)'
+                ];
+                $selected = $_POST['operation'] ?? '';
+                foreach ($operations as $key => $label) {
+                    $isSelected = ($key === $selected) ? 'selected' : '';
+                    echo "<option value='$key' $isSelected>$label</option>";
+                }
+                ?>
+            </select>
+
+            <button type="submit" name="calculate" class="aurora-button">Calculate</button>
+        </form>
+
+        <!-- Afișare rezultate POST -->
+        <div id="result">
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calculate'])) {
+            $num1 = floatval($_POST['num1']);
+            $num2 = floatval($_POST['num2']);
+            $operation = $_POST['operation'] ?? '';
+            $result = null;
+
+            echo "<h3>Rezultate pentru valorile introduse:</h3>";
+
+            switch ($operation) {
+                case 'sum':
+                    $result = $num1 + $num2;
+                    echo "<p>Sum: " . number_format($result, 2) . "</p>";
+                    break;
+                case 'difference':
+                    $result = $num1 - $num2;
+                    echo "<p>Difference: " . number_format($result, 2) . "</p>";
+                    break;
+                case 'product':
+                    $result = $num1 * $num2;
+                    echo "<p>Product: " . number_format($result, 2) . "</p>";
+                    break;
+                case 'quotient':
+                    if ($num2 != 0) {
+                        $result = floor($num1 / $num2);
+                        echo "<p>Quotient (integer division): $result</p>";
+                    } else {
+                        echo "<p>Quotient: undefined (division by zero)</p>";
+                    }
+                    break;
+                case 'modulus':
+                    if ($num2 != 0) {
+                        $result = fmod($num1, $num2);
+                        echo "<p>Modulus: " . number_format($result, 2) . "</p>";
+                    } else {
+                        echo "<p>Modulus: undefined (modulus by zero)</p>";
+                    }
+                    break;
+                case 'division':
+                    if ($num2 != 0) {
+                        $result = $num1 / $num2;
+                        echo "<p>Division Result: " . number_format($result, 2) . "</p>";
+                    } else {
+                        echo "<p>Division Result: undefined (division by zero)</p>";
+                    }
+                    break;
+                case 'power':
+                    $result = pow($num1, $num2);
+                    echo "<p>Power Result: " . number_format($result, 2) . "</p>";
+                    break;
+                default:
+                    echo "<p>Invalid operation selected.</p>";
+            }
+
+            echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+        }
+        ?>
+        </div>
+
+        <hr class="aurora-label">
+
+        <!-- Calculator cu numere aleatoare -->
+        <form method="post">
+            <button type="submit" name="calculator_operations" class="aurora-button">Calculator Operations (Random)</button>
+        </form>
+
+        <?php
+        if (isset($_POST['calculator_operations'])) {
+            $num1 = rand(1, 1000) / 10;
+            $num2 = rand(1, 1000) / 10;
+
+            echo "<h3>Operații pentru numere generate automat:</h3>";
+            echo "<p>Number 1: $num1</p>";
+            echo "<p>Number 2: $num2</p>";
+
+            $sum = $num1 + $num2;
+            $difference = $num1 - $num2;
+            $product = $num1 * $num2;
+            $quotient = $num2 != 0 ? floor($num1 / $num2) : "undefined";
+            $modulus = $num2 != 0 ? fmod($num1, $num2) : "undefined";
+            $division = $num2 != 0 ? $num1 / $num2 : "undefined";
+            $power = pow($num1, $num2);
+
+            echo "<p>Sum: " . number_format($sum, 2) . "</p>";
+            echo "<p>Difference: " . number_format($difference, 2) . "</p>";
+            echo "<p>Product: " . number_format($product, 2) . "</p>";
+            echo "<p>Quotient (integer division): $quotient</p>";
+            echo "<p>Modulus: " . (is_numeric($modulus) ? number_format($modulus, 2) : $modulus) . "</p>";
+            echo "<p>Division Result: " . (is_numeric($division) ? number_format($division, 2) : $division) . "</p>";
+            echo "<p>Power Result: " . number_format($power, 2) . "</p>";
+
+            echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+        }
+        ?>
+
+        <hr class="aurora-label">
+
+        <!-- Demonstrație cu $_GET -->
+        <h3>Exemplu cu $_GET</h3>
+        <p>Pentru testare, accesează manual un URL de forma:<br>
+        <code>http://localhost:8080/EXERCITII_PHP/PHP/curs_3/decizii/decizii.php?a=10&op=%2B&b=25</code>
+        </p>
+
+        <?php
+        if (isset($_GET['a'], $_GET['b'], $_GET['op'])) {
+            $a = floatval($_GET['a']);
+            $b = floatval($_GET['b']);
+            $op = trim($_GET['op'], "'"); // curăță eventualele apostroafe
+            $res = null;
+
+            switch ($op) {
+                case '+': $res = $a + $b; break;
+                case '-': $res = $a - $b; break;
+                case '*': $res = $a * $b; break;
+                case '/': $res = ($b != 0) ? $a / $b : 'undefined'; break;
+                case '%': $res = ($b != 0) ? fmod($a, $b) : 'undefined'; break;
+                case '^': $res = pow($a, $b); break;
+                default: $res = 'invalid operator';
+            }
+
+            echo "<p>Rezultat GET ($a $op $b) = <strong>$res</strong></p>";
+        }
+        ?>
+
+        <div class="result-bar-container">
+            <div class="result-bar" data-value="0"></div>
+        </div>
+
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
             <button type="submit" name="check_parity_100" class="aurora-button">Check Parity (1-100)</button>
@@ -1402,6 +1566,64 @@
                 window.scrollTo(0, parseInt(scrollPosition, 10));
             }
         });
-    </script>  
+
+        const form = document.getElementById('searchForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value;
+            if (query.trim() !== '') {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            }
+        });
+
+        const formCalc = document.getElementById('calcForm');
+        const resultDiv = document.getElementById('result');
+
+        if(formCalc && resultDiv){
+            let debounceTimer;
+            formCalc.addEventListener('input', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(updateCalculator, 400);
+            });
+
+            async function updateCalculator() {
+                const formData = new FormData(formCalc);
+                resultDiv.classList.add('fade');
+                try {
+                    const response = await fetch('', { method: 'POST', body: formData });
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+                    const newResult = doc.getElementById('result').innerHTML;
+
+                    setTimeout(() => {
+                        resultDiv.innerHTML = newResult;
+                        resultDiv.classList.remove('fade');
+                        updateProgressBar();
+                    }, 200);
+                } catch (error) {
+                    console.error('Error updating result:', error);
+                }
+            }
+
+            function updateProgressBar() {
+                const bar = document.querySelector('.result-bar');
+                if (!bar) return;
+
+                const value = parseFloat(bar.dataset.value);
+                const width = Math.min(Math.abs(value), 100);
+                let color = 'linear-gradient(90deg, #00aaff, #0066ff)';
+
+                if (value > 0) color = 'linear-gradient(90deg, #00ffcc, #00aa55)';
+                else if (value < 0) color = 'linear-gradient(90deg, #ff66cc, #cc0000)';
+
+                
+                bar.setAttribute('data-value', width.toFixed(0));
+                bar.style.width = width + '%';
+                bar.style.background = color;
+            }
+        }
+        
+    </script>
 </body>
 </html>
