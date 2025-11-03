@@ -1288,29 +1288,203 @@
         </p>
 
         <?php
-        if (isset($_GET['a'], $_GET['b'], $_GET['op'])) {
-            $a = floatval($_GET['a']);
-            $b = floatval($_GET['b']);
-            $op = trim($_GET['op'], "'"); // curăță eventualele apostroafe
-            $res = null;
+            if (isset($_GET['a'], $_GET['b'], $_GET['op'])) {
+                $a = floatval($_GET['a']);
+                $b = floatval($_GET['b']);
+                $op = trim($_GET['op'], "'"); // curăță eventualele apostroafe
+                $res = null;
 
-            switch ($op) {
-                case '+': $res = $a + $b; break;
-                case '-': $res = $a - $b; break;
-                case '*': $res = $a * $b; break;
-                case '/': $res = ($b != 0) ? $a / $b : 'undefined'; break;
-                case '%': $res = ($b != 0) ? fmod($a, $b) : 'undefined'; break;
-                case '^': $res = pow($a, $b); break;
-                default: $res = 'invalid operator';
+                switch ($op) {
+                    case '+': $res = $a + $b; break;
+                    case '-': $res = $a - $b; break;
+                    case '*': $res = $a * $b; break;
+                    case '/': $res = ($b != 0) ? $a / $b : 'undefined'; break;
+                    case '%': $res = ($b != 0) ? fmod($a, $b) : 'undefined'; break;
+                    case '^': $res = pow($a, $b); break;
+                    default: $res = 'invalid operator';
+                }
+
+                echo "<p>Rezultat GET ($a $op $b) = <strong>$res</strong></p>";
             }
-
-            echo "<p>Rezultat GET ($a $op $b) = <strong>$res</strong></p>";
-        }
+            if(isset($_GET['a'], $_GET['b'], $_GET['op'])) {
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
         ?>
 
         <div class="result-bar-container">
             <div class="result-bar" data-value="0"></div>
         </div>
+
+        <h2>19. Clientul unei banci castiga in fiecare an 11% dobanda din sold. Sa se afiseze soldul pe fiecare an, daca lasa banii la banca 8 ani. El depune initial 2500 RON si dupa cate 600 de lei pe fiecare luna timp de 8 ani de zile. Din al doilea an soldul este egal cu suma depusa + dobanda. Date de intrare: sold: 2500, dobanda: 11% pe an, nr ani: 8. Date de iesire: suma in lei</h2>
+        <form method="post">
+            <button type="submit" name="bank_interest" class="aurora-button">Bank interest 8 years</button>
+        </form>
+        <?php
+            if(isset($_POST['bank_interest'])) {
+                $initial_submission = 2500;
+                $numbers_years = 8;
+                $interest = 0.11;
+                $compounding_rate = 12;
+                //dn - annual nominal interest;
+                //d – interest per period
+                //n - number of compounding periods
+                //m - number of compounding periods/year
+                //na – number of years
+
+                $numbers_compounding = $numbers_years * $compounding_rate;
+
+                $sold_only12 = $initial_submission * ((1 + $interest / $compounding_rate) ** ($numbers_years * $compounding_rate));
+                echo "<p>The sold of the client's account $initial_submission RON initialy deposited over $numbers_years years
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_only12, 2) . " RON</p>";
+                
+                $sold_initial = $initial_submission * ((1 + $interest / $compounding_rate) ** ($numbers_years * $compounding_rate));
+                $monthly_deposit = 600;
+                $sold_monthly_deposit = $monthly_deposit * (((1 + $interest / $compounding_rate) ** ($numbers_years*$compounding_rate)) - 1) / ($interest / $compounding_rate);
+                $sold_monthly = $sold_initial + $sold_monthly_deposit;
+                echo "<p>The initial sold of the client's account $initial_submission RON initialy deposited over $numbers_years years 
+                and accompanied by monthly deposits of $monthly_deposit RON
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_monthly, 2) . " RON</p>";
+
+                echo "<p>The total amount in the account after $numbers_years years is: " . number_format($sold_only12 + $sold_monthly_deposit, 2) . " RON</p>";
+                 
+                $nominal_interest = $interest;
+                $monthly_interest = $interest / $compounding_rate;
+                echo "<p>The nominal interest is " . number_format($nominal_interest * 100, 2) . "%</p>";
+                echo "<p>The interest compoundind monthly is " . number_format($monthly_interest * 100, 2) . "%</p>";
+
+                //using for as repetitive structure
+                $sold_only12 = $initial_submission;
+                $years_sold = 0;
+                for($i = 1; $i <= $numbers_compounding; $i++) {
+                    $sold_only12 = $sold_only12 * (1 + $monthly_interest);
+                    if ($i % 12 === 0) {
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_only12, 2) . " RON.</p>";
+                    }
+                }
+                echo "<p>The sold of the client's account $initial_submission RON initialy deposited over $numbers_years years
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_only12, 2) . " RON</p>";
+
+                $sold_monthly = $initial_submission * (1 + $monthly_interest);
+                $years_sold = 0;
+                for ($i = 1; $i <= $numbers_compounding - 1; $i++) {
+                    if ($i % 12 === 0) {
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly, 2) . " RON.</p>";
+                    }
+                    $sold_monthly = ($sold_monthly + $monthly_deposit) * (1 + $monthly_interest);
+                }
+                $years_sold++;
+                $sold_monthly = $sold_monthly + $monthly_deposit;
+                echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly, 2) . " RON.</p>";
+
+                echo "<p>The initial sold of the client's account $initial_submission RON initialy deposited over $numbers_years years 
+                and accompanied by monthly deposits of $monthly_deposit RON
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_monthly, 2) . " RON</p>";
+
+                //using while as repetitive submision
+                $sold_only12 = $initial_submission;
+                $i = 1;
+                $years_sold = 0;
+                while($i <= $numbers_compounding) {
+                    $sold_only12 = $sold_only12 * (1 + $monthly_interest);
+                    if ($i % 12 === 0) {
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_only12, 2) . " RON .</p>";
+                    }
+                    $i++;
+                    
+                }
+                echo "<p>The sold of the client's account $initial_submission RON initialy deposited over $numbers_years years
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_only12, 2) . " RON</p>";
+
+                $sold_monthly = $initial_submission * (1 + $monthly_interest);
+                $i = 1;
+                $years_sold = 0;
+                while ($i <= $numbers_compounding - 1) {
+                    $i++;
+                    $sold_monthly = ($sold_monthly + $monthly_deposit) * (1 + $monthly_interest);
+                    if ($i === 96) {
+                        $years_sold++;    
+                        $sold_monthly = ($sold_monthly + $monthly_deposit);
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly,2) . " RON.</p>";
+                    } else if ($i % 12 === 0) { 
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly, 2) . " RON.</p>";
+                    }
+                } 
+                echo "<p>The initial sold of the client's account $initial_submission RON initialy deposited over $numbers_years years 
+                and accompanied by monthly deposits of $monthly_deposit RON
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_monthly, 2) . " RON</p>";
+
+                //using do while as repetitive submision
+                $sold_only12 = $initial_submission;
+                $i = 0;
+                $years_sold = 0;
+                do {
+                    $i++;
+                    $sold_only12 = $sold_only12 * (1 + $monthly_interest);
+                    if ($i === 96){
+                        $years_sold++;
+                        $sold_monthly = ($sold_monthly + $monthly_deposit);
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_only12,2) . " RON.</p>"; 
+                    } else if ($i % 12 === 0) {
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_only12,2) . " RON.</p>";
+                    }
+                } while($i <= $numbers_compounding - 1);
+                echo "<p>The sold of the client's account $initial_submission RON initialy deposited over $numbers_years years
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_only12, 2) . " RON</p>";
+
+                $sold_monthly = $initial_submission * (1 + $monthly_interest);
+                $i = 1;
+                $years_sold = 0;
+                do {
+                    $i++;
+                    $sold_monthly = ($sold_monthly + $monthly_deposit) * (1 + $monthly_interest);
+                    if ($i === 96) {
+                        $years_sold++;
+                        $sold_monthly = $sold_monthly + $monthly_deposit;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly,2) . "RON.</p>";
+                    } else if ($i % 12 === 0) {
+                        $years_sold++;
+                        echo "<p>At the end of the year $years_sold out of $numbers_years in the client's account are " . number_format($sold_monthly,2) . "RON.</p>";
+                    }
+                } while($i <= $numbers_compounding - 1);
+
+                echo "<p>The initial sold of the client's account $initial_submission RON initialy deposited over $numbers_years years 
+                and accompanied by monthly deposits of $monthly_deposit RON
+                at an annual interest rate of " . ($interest * 100) . "%,
+                compounded monthly over $numbers_years years,
+                with $numbers_compounding
+                compounding periods is: " . number_format($sold_monthly, 2) . " RON</p>";
+                
+            }
+            if (isset($_POST['bank_interest'])) {
+                    echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+                }
+        ?>
 
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
         <form method="post">
@@ -1334,6 +1508,7 @@
                 echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
             }
         ?>
+        
         <h2>22. Sa se verifice daca un numar generat cu functia rand(1, 100) este mai mare decat 10 si mai mic decat 50.</h2>
         <form method="post">
             <button type="submit" name="check_range_10_50" class="aurora-button">Check Range (10-50)</button>
