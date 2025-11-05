@@ -15,7 +15,15 @@
 <body>
     <header class="aurora-input aurora">
         <h1>PHP Bank Transaction</h1>
-        <h2>A bank customer earns interest on his balance every year. Display the balance for each year, if he leaves the money in the bank for numbers of years chosen. He initially deposits 2500 RON and then 600 RON each month for 8 years. From the second year, the balance is equal to the amount deposited + interest. Input data: balance: 2500, interest: 11% per year, number of years: 8. Output data: amount in RONa an soldul este egal cu suma depusa + dobanda. Date de intrare: sold: 2500, dobanda: 11% pe an, nr ani: 8. Date de iesire: suma in lei</h2>
+        <h2>A bank customer earns interest on his balance every year. 
+            Display the balance for each year, if he leaves the money in the bank for numbers of years chosen. 
+            Practical example: The client initially deposits 2500 RON and then 600 RON each month for 8 years. 
+            From the second year, the balance is equal to the amount deposited + interest. 
+            Input data: balance: 2500(initial submission), interest: 11% per year, number of years: 8. 
+            Output data: amount in RON
+            At the beginning there will be an interactive dynamic calculator. 
+            An example will be presented at the end.
+        </h2>
         <form method="post">
             <button type="submit" name="bank_interest" class="aurora-button">Bank interest after years</button>
         </form>
@@ -95,7 +103,7 @@
                 compounding periods is: " . number_format($sold_monthly, 2) . " RON</p>";
             }
             if (isset($_POST['bank_interest'])) {
-                    echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+                    echo '<a href="calculator_bank.php" class="aurora-input">Try Again</a>';
                 }
         ?>
     </header>
@@ -114,7 +122,7 @@
         </section>
     </main>
     <footer class="system-footer">
-        <p>&copy; 2024 PHP Decision Making Exercises</p>
+        <p>&copy; 2024 PHP Bank Making Exercises</p>
     </footer> 
     <script>
         window.addEventListener('scroll', () => {
