@@ -24,8 +24,44 @@
             At the beginning there will be an interactive dynamic calculator. 
             An example will be presented at the end.
         </h2>
-        <form method="post">
-            <button type="submit" name="bank_interest" class="aurora-button">Bank interest after years</button>
+        <h2>Bank Interest Calculator (with BNR Exchange Rates)</h2>
+        <p>Exchange rates last updated:<strong<?=$rate_date ?></strong></p>
+        <form id="calcForm" method="post">
+            <fieldset class="aurora-input">Banking Simulation
+                <legend class="aurora-label">
+                    <label id="initial_submission_label" for="initial_submission_input" class="aurora-label">Initial submision:</label>
+                    <input id="initial_submission_input" type="number" class="aurora-input" name="initial_submision" placeholder="2500" step="any" min="0" required/>
+
+                    <label id="currency_label" for="currency_select" class="aurora-label">Currency:</label>
+                    <select id="currency_select" class="aurora-select" name="currency">
+                        <?php
+                            foreach ($rates as $symbol => $value):
+                        ?>
+                        <option value="<?= $symbol ?>"><?= $symbol ?> (<?= $value ?> RON)</option>
+                        <?php
+                            endforeach;
+                        ?>
+                    </select>
+
+                </legend>
+                <legend class="aurora-input"
+
+                    <label id="monthly_deposit_label" class="aurora-label" for="monthly_deposit_input">Monthly deposit:</label>
+                    <input id="monthly_deposit_input" type="number" class="aurora-input" name="monthly_deposit" placeholder="600" step="any" min="0" required/>
+
+                </legend>
+                <legend class="aurora-label">
+
+                    <label id="interest_label" for="interest_input" class="aurora-label">Annual interest (%):</label>
+                    <input id="interest_input" type="number" class="aurora-input" name="interest" placeholder="11" step="any" min="0" required/>
+
+                    <label id="years_label" for="years_input" class="aurora-label">Number of years:</label>
+                    <input id="years_input" type="number" class="aurora-input" name="years" placeholder="8" step="any" min="1" required>
+                </legend>
+                <legend>
+                    <button type="submit" name="bank_interest" class="aurora-button">Bank interest after years</button>
+                </legend>
+            </fieldset>
         </form>
         <?php
             if(isset($_POST['bank_interest'])) {
