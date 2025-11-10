@@ -1,3 +1,6 @@
+<?php 
+    include 'calculator_bank_bnr.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en" style="
 --g1:#ff8c00;
@@ -8,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP Decision Document</title>
+    <title>PHP Banking Document</title>
     <link rel="icon" type="image/x-icon" href="bank_icon/bank_icon.png">
     <link rel="stylesheet" href="bank_style/style_calculator.css">
 </head>
@@ -25,26 +28,36 @@
             An example will be presented at the end.
         </h2>
         <h2>Bank Interest Calculator (with BNR Exchange Rates)</h2>
-        <p>Exchange rates last updated:<strong<?=$rate_date ?></strong></p>
+        <p>Exchange rates last updated: 
+            <strong>
+                <?= 
+                    $rate_date 
+                ?>
+            </strong>
+        </p>
         <form id="calcForm" method="post">
             <fieldset class="aurora-input">Banking Simulation
                 <legend class="aurora-label">
                     <label id="initial_submission_label" for="initial_submission_input" class="aurora-label">Initial submision:</label>
-                    <input id="initial_submission_input" type="number" class="aurora-input" name="initial_submision" placeholder="2500" step="any" min="0" required/>
+                    <input id="initial_submission_input" type="number" class="aurora-input" name="initial_submission" placeholder="2500" step="any" min="0" required/>
 
                     <label id="currency_label" for="currency_select" class="aurora-label">Currency:</label>
                     <select id="currency_select" class="aurora-select" name="currency">
                         <?php
-                            foreach ($rates as $symbol => $value):
+                            foreach ($rates as $currency => $value):
                         ?>
-                        <option value="<?= $symbol ?>"><?= $symbol ?> (<?= $value ?> RON)</option>
+                        <option value="<?= $currency ?>">
+                            <?= 
+                                $currency 
+                            ?> (<?= number_format($value, 4) ?> RON)
+                        </option>
                         <?php
-                            endforeach;
+                            endforeach; 
                         ?>
                     </select>
 
                 </legend>
-                <legend class="aurora-input"
+                <legend class="aurora-input">
 
                     <label id="monthly_deposit_label" class="aurora-label" for="monthly_deposit_input">Monthly deposit:</label>
                     <input id="monthly_deposit_input" type="number" class="aurora-input" name="monthly_deposit" placeholder="600" step="any" min="0" required/>
@@ -63,6 +76,10 @@
                 </legend>
             </fieldset>
         </form>
+        <hr>
+        <div id="result">
+            <?= $result ?>
+        </div>
         <?php
             if(isset($_POST['bank_interest'])) {
                 $initial_submission = 2500;
