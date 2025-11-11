@@ -1482,8 +1482,53 @@
                 
             }
             if (isset($_POST['bank_interest'])) {
-                    echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
+        ?>
+
+        <h2>20. Se considera o succesiune de caractere de '1' si '0' din care primul caracter este '1'. Aceasta secventa este reprezentarea in baza 2 a unui numar natural. Sa se afiseze acest numar in baza 10. Date de intrare: 1111 11111 Date de iesire: 15 31</h2>
+        <form id="conversionNumber" name="conversionNumber" method="post">
+            <fieldset class="aurora-input">Binary → Decimal Conversion
+                <legend class="aurora-label">Binary number one
+                    <label id="binary_number1_label" for="binary_number1_input" class="aurora-label">Binary number:</label>
+                    <input id="binary_number1_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number1" placeholder="Please enter a binary number..." required/>
+                </legend>
+                <legend class="aurora-label">Decimal number one
+                    <label id="decimal_number1_label" class="aurora-label"></label>
+                </legend>
+            </fieldset>
+            <hr class="aurora-label"/>
+            <fieldset class="aurora-input">Binary → Decimal Conversion
+                <legend class="aurora-label">Binary number two
+                    <label id="binary_number2_label" for="binary_number2_input" class="aurora-label">Binary number:</label>
+                    <input id="binary_number2_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number2" placeholder="Please enter a binary number..." required/>
+                </legend>
+                <legend class="aurora-label">Decimal number two
+                    <label id="decimal_number2_label" class="aurora-label"></label>
+                </legend>
+            </fieldset>
+            <hr class="aurora-label"/>
+            <fieldset class="aurora-input">
+                <button type="submit" class="aurora-button">Convert to decimal</button>
+            </fieldset>    
+        </form>
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['binary_number1'], $_POST['binary_number2'])) {
+                $binary1 = $_POST['binary_number1'];
+                $binary2 = $_POST['binary_number2'];
+
+                if (preg_match('/^[01]+$/', $binary1) && preg_match('/^[01]+$/', $binary2)) {
+                    $decimal1 = bindec($binary1);
+                    $decimal2 = bindec($binary2);
+
+                    echo "<p>Binary $binary1 → Decimal $decimal1</p>";
+                    echo "<p>Binary $binary2 → Decimal $decimal2</p>";
+                } else {
+                    echo "<p>Invalid binary input!</p>";
                 }
+
+                echo '<a href="decizii.php" class="aurora-input">Try Again</a>';
+            }
         ?>
 
         <h2>21. Sa se verifice daca un numar generat cu functia rand(1, 100) este par sau impar.</h2>
@@ -1799,6 +1844,28 @@
             }
         }
         
+        const conversionNumber = document.getElementById('conversionNumber');
+        document.addEventListener('DOMContentLoaded', () => {
+            const bin1 = document.getElementById('binary_number1_input');
+            const bin2 = document.getElementById('binary_number2_input');
+            const dec1 = document.getElementById('decimal_number1_label');
+            const dec2 = document.getElementById('decimal_number2_label');
+
+            function convertBinaryToDecimal(binaryStr) {
+                if (!/^[01]+$/.test(binaryStr)) {
+                    return "Invalid binary";
+                }
+                return parseInt(binaryStr, 2);
+            }
+
+            [bin1, bin2].forEach((input, i) => {
+                input.addEventListener('input', () => {
+                    const binary = input.value.trim();
+                    const decimal = convertBinaryToDecimal(binary);
+                    (i === 0 ? dec1 : dec2).textContent = decimal;
+                });
+            });
+        });
     </script>
 </body>
 </html>
