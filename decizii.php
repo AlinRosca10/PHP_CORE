@@ -1491,20 +1491,14 @@
             <fieldset class="aurora-input">Binary → Decimal Conversion
                 <legend class="aurora-label">Binary number one
                     <label id="binary_number1_label" for="binary_number1_input" class="aurora-label">Binary number:</label>
-                    <input id="binary_number1_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number1" placeholder="Please enter a binary number..." required/>
-                </legend>
-                <legend class="aurora-label">Decimal number one
-                    <label id="decimal_number1_label" class="aurora-label"></label>
+                    <input id="binary_number1_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number1" placeholder="Please enter a binary number..." required style="width: 250px;"/>
                 </legend>
             </fieldset>
             <hr class="aurora-label"/>
             <fieldset class="aurora-input">Binary → Decimal Conversion
                 <legend class="aurora-label">Binary number two
                     <label id="binary_number2_label" for="binary_number2_input" class="aurora-label">Binary number:</label>
-                    <input id="binary_number2_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number2" placeholder="Please enter a binary number..." required/>
-                </legend>
-                <legend class="aurora-label">Decimal number two
-                    <label id="decimal_number2_label" class="aurora-label"></label>
+                    <input id="binary_number2_input" type="text" inputmode="numeric" pattern="[01]*" class="aurora-input" name="binary_number2" placeholder="Please enter a binary number..." required style="width: 250px;"/>
                 </legend>
             </fieldset>
             <hr class="aurora-label"/>
