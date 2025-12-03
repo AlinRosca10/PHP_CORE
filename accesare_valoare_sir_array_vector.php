@@ -11,7 +11,7 @@
     echo "<hr>";
 
     $a = array('a', 3 => 'b', 1 => 'c', 'd');
-    echo $a[2]; // va afisa 'd'
+    echo $a[4]; // va afisa 'd'
     echo "<hr>";
     for ($i = 0; $i < count($a); $i++) {
         echo "Elementul $i este: " . $a[$i] . "<br>";
