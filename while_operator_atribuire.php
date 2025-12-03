@@ -6,7 +6,7 @@
     echo "<hr>";
 
     $x = 7;
-    while ($x < 30) {
+    while ($x < 300) {
         $x .= 2; // atribuirea cu operator de concatenare
         echo $x . "<br>"; // concatenare
     }
