@@ -6,13 +6,13 @@
     echo "<hr>";
 
     $x = 7;
-    while ($x < 300) {
+    while ($x < 30000) {
         $x .= 2; // atribuirea cu operator de concatenare
         echo $x . "<br>"; // concatenare
     }
-
     echo "<hr>";
 
+    $x = 0;
     while ($x < 100) {
         $x += 5; // atribuirea cu operator de adunare
         echo $x . "<br>"; // afișare
