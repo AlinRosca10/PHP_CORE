@@ -14,4 +14,14 @@
     if ($x == 25) {
         echo "Valoarea lui $x este 25"; // Afișează 'Valoarea este 25' dacă $x este egal cu 5
     }
+
+    echo "<hr>";
+
+    $x = 10;
+    if ($x == 25) echo "Valoarea lui $x este 25"; // Nu afișează nimic deoarece condiția este falsă
+
+    echo "<hr>";
+
+    $x = 10;
+    if ($x == 25); echo "Valoarea lui $x este 25"; // Afișează întotdeauna 'Valoarea este 25' din cauza punctului și virgulei după condiție
 ?>
