@@ -1,3 +1,5 @@
+<h1>Teste PHP Inclusion</h1>
+<h2>Continut incarcat din fisierul Teste.php</h2>
 <?php
     echo "Hello from curs_4/teste.php";
     echo "<br>";
