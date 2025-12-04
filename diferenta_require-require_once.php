@@ -8,7 +8,7 @@
 <body>
     <?php
         // Include the header file
-        include "header.html";
+        include "html/header_footer/header.html";
 
         // Include the file using require
         require 'somefile.php';
@@ -33,7 +33,7 @@
     </main>
     <?php
         // Include the footer file
-        include "footer.html";
+        include "html/header_footer/footer.html";
     ?>
 </body>
 </html>
