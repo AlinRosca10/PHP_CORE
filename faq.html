@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Curs 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .answer {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <?php 
+        include 'header.html'; 
+    ?>
+
+    <h1>Frequently Asked Questions (FAQ)</h1>
+
+    <h2 class="question">What is PHP?</h2>
+    <p class="answer">PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language.</p>
+
+    <h2 class="question">What is the difference between include and require in PHP?</h2>
+    <p class="answer">Both include and require are used to include files in PHP. The main difference is that require will produce a fatal error (E_COMPILE_ERROR) and stop the script if the file is not found, while include will only produce a warning (E_WARNING) and the script will continue.</p>
+
+    <h2 class="question">What are include_once and require_once?</h2>
+    <p class="answer">include_once and require_once are similar to include and require, but they ensure that the file is included only once, preventing multiple inclusions of the same file.</p>
+
+    <h2 class="question">How do I access array values in PHP?</h2>
+    <p class="answer">You can access array values using square brackets with the key, e.g., $array['key'] for associative arrays or $array[0] for indexed arrays.</p>
+
+    <h2 class="question">What are operators in PHP?</h2>
+    <p class="answer">Operators in PHP are symbols that perform operations on variables and values. They include arithmetic, assignment, comparison, logical, and more.</p>
+
+    <h2 class="question">How do loops work in PHP?</h2>
+    <p class="answer">PHP supports several types of loops: for, while, do-while, and foreach. They allow you to execute a block of code repeatedly based on a condition.</p>
+
+    <h2 class="question">What is the purpose of this course?</h2>
+    <p class="answer">This course covers PHP programming concepts, including variables, operators, control structures, arrays, and file inclusion.</p>
+
+    <footer>
+        <p>&copy; 2024 Curs 4 PHP. All rights reserved.</p>
+    </footer>
+</body>
+</html>

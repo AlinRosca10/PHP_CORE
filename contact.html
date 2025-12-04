@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT - Curs 4</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="submit_contact.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <address>
+        You can also reach us at:<br>
+        Curs 4 PHP<br>
+        76 Web Dev Lane<br>
+        Code City, CS 56789<br>
+        Email: alin.rosca@yahoo.com, 
+        Phone: +123-456-7890
+    </address>
+    <a href="index.html">Go to Home Page</a>
+
+    <?php
+        include 'footer.html';
+    ?>
+</body>
+</html>
