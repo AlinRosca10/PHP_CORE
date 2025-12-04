@@ -3,6 +3,12 @@
 <?php
     echo "Hello from curs_4/teste.php";
     echo "<br>";
+
+    $x = 10;
+    $y = 20;
+    $sum = $x + $y;
+    echo "The sum of $x and $y is: $sum";
+
     echo "This is a test file for inclusion.";
     echo "<br>";
     echo "Current timestamp: " . time();

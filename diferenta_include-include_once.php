@@ -74,6 +74,24 @@
     echo "<br /><strong>In concluzie, alegerea intre include si include_once depinde de contextul si cerintele specifice ale aplicatiei noastre PHP.</strong>";
     echo "<hr style='border-top: 2px solid #ff0000;'>";
 
+    echo "<hr style='border-top: 2px solid #ff00ee;'>";
+    echo "<h2>Additional Information for include or include_once:</h2>";
+    echo "<p>Both include and include_once are used to include and evaluate a specified file in PHP. However, there are some key differences between the two:</p>";
+    echo "<ul>";
+    echo "<li><strong>include:</strong> This statement includes and evaluates the specified file
+    each time it is called. If the file is not found, a warning is issued, but the script continues to execute.</li>";
+    echo "<li><strong>include_once:</strong> This statement includes and evaluates the specified file only once during the execution of the script. If the file has already been included, it will not be included again. This is useful to prevent redeclaration errors for functions, classes, or variables defined in the included file.</li>";
+    echo "</ul>";
+    echo "<p>In summary, use include when you want to include a file multiple times, and use include_once when you want to ensure that a file is included only once to avoid potential conflicts.</p>";
+    echo "<p>Both statements are essential for modular programming in PHP, allowing developers to organize code into separate files for better maintainability and reusability.</p>";
+    echo "<p>It's important to choose the appropriate statement based on the specific requirements of your application to ensure optimal performance and avoid errors.</p>";
+    echo "<p>For more information, you can refer to the official PHP documentation:</p>";
+    echo "<a href='https://www.php.net/manual/en/function.include.php' target='_blank' style='color: blue;'>PHP include() Documentation</a><br>";
+    echo "<a href='https://www.php.net/manual/en/function.include-once.php' target='_blank' style='color: blue;'>PHP include_once() Documentation</a>";
+    echo "</p>";
+    echo "$x and $y are variables defined in teste.php that can be accessed here if needed. And the sum is: $sum.";
+    echo "<hr style='border-top: 2px solid #ff00ee;'>";
+
     echo "<hr>";
     echo "<h2>Server and Environment Information:</h2>";
     echo "<hr>";
