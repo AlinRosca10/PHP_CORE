@@ -5,7 +5,7 @@
     echo "<br>";
 
     $x = 10;
-    $y = 200;
+    $y = 2000;
     $sum = $x + $y;
     echo "The sum of $x and $y is: $sum";
 
