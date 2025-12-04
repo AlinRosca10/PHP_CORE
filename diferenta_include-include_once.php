@@ -65,6 +65,13 @@
     echo "<br />";
     include_once "teste.php"; // include_once a treia oara acelasi fisier
     echo "<br />";
+
+    echo "<br /><strong>Observatie:</strong> Fisierul 'teste.php' a fost inclus o singura data folosind include_once, in ciuda faptului ca am incercat sa-l includem de trei ori.</p>";
+    echo "<br /><strong>In schimb, folosind include, fisierul a fost inclus de fiecare data cand am apelat include.</strong>";
+    echo "<br /><strong>Aceasta diferenta este cruciala pentru evitarea erorilor cauzate de includerea multipla a aceluiasi fisier, mai ales in cazul definirii functiilor sau claselor.</strong>";
+    echo "<br /><strong>Astfel, include_once este util atunci cand dorim sa ne asiguram ca un fisier este inclus o singura data in cadrul unui script.</strong>";
+    echo "<br /><strong>Pe de alta parte, include este util atunci cand dorim sa includem un fisier de mai multe ori, daca este necesar.</strong>";
+    echo "<br /><strong>In concluzie, alegerea intre include si include_once depinde de contextul si cerintele specifice ale aplicatiei noastre PHP.</strong>";
     echo "<hr style='border-top: 2px solid #ff0000;'>";
 
     echo "<hr>";
