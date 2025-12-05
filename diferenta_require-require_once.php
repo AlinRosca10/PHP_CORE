@@ -33,11 +33,16 @@
             require "book.php";
         ?>
         <?php
-            echo "List of books:<br>";
-            foreach ($books as $book) {
-                echo $book['title'] . " - " . $book['author'] . "<br>"; // afisarea titlui si autorului cartii folosind concatenarea sirurilor de caractere in constructia echo
-            }
+            // echo "List of books:<br>";
+            // foreach($books as $book) {
+            //     echo "<h1>$book[title]</h1>" . "<h2>$book[author]</h2>" . "<br>"; // afisarea titlui si autorului cartii folosind concatenarea sirurilor de caractere in constructia echo
+            // }
         ?>
+        
+        <?php foreach($books as $key_book => $book) :?>
+            <h1>The title of the book: <?php echo $book['title']; ?></h1>
+            <h2>The author of the book: <?php echo $book['title']; ?></h2>
+        <?php endforeach; ?>
         <p>This is the main section of the webpage.</p>
     </main>
     <?php
