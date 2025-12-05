@@ -29,6 +29,15 @@
     <main
         <h1>Welcome to the Main Content</h1>
         <h2>This section demonstrates require vs require_once</h2>
+        <?php 
+            require "book.php";
+        ?>
+        <?php
+            echo "List of books:<br>";
+            foreach ($books as $book) {
+                echo "$book[title] - $book[author] <br>"; // afisarea titlui si autorului cartii folosind substitutia variabilelor in constructia echo
+            }
+        ?>
         <p>This is the main section of the webpage.</p>
     </main>
     <?php
