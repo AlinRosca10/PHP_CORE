@@ -35,7 +35,7 @@
         <?php
             echo "List of books:<br>";
             foreach ($books as $book) {
-                echo "$book[title] - $book[author] <br>"; // afisarea titlui si autorului cartii folosind substitutia variabilelor in constructia echo
+                echo $book['title'] . " - " . $book['author'] . "<br>"; // afisarea titlui si autorului cartii folosind concatenarea sirurilor de caractere in constructia echo
             }
         ?>
         <p>This is the main section of the webpage.</p>
