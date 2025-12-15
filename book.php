@@ -17,7 +17,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Great_Gatsby",
                 "summary" => "A novel about the American dream and the decadence of the Jazz Age.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/f/f7/TheGreatGatsby_1925jacket.jpeg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:TheGreatGatsby_1925jacket.jpeg",
                 "year" => 1925,
                 "genre" => "Novel"
@@ -40,7 +40,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four",
                 "summary" => "A dystopian novel about totalitarianism and surveillance.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/c/c3/1984first.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/51/1984_first_edition_cover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:1984first.jpg",
                 "year" => 1949,
                 "genre" => "Dystopian"
@@ -63,7 +63,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Grapes_of_Wrath",
                 "summary" => "A novel about the struggles of a family during the Great Depression.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/0/0e/GrapesOfWrath.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:GrapesOfWrath.jpg",
                 "year" => 1939,
                 "genre" => "Realist Novel"
@@ -85,7 +85,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude",
                 "summary" => "A landmark novel that tells the multi-generational story of the Buendía family.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/4/4e/Cien_a%C3%B1os_de_soledad_%28book_cover%29.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/a0/Cien_a%C3%B1os_de_soledad_%28book_cover%2C_1967%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Cien_a%C3%B1os_de_soledad_(book_cover).jpg",
                 "year" => 1967,
                 "genre" => "Magic Realism"
@@ -108,7 +108,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Moby-Dick",
                 "summary" => "A novel about the voyage of the whaling ship Pequod and its captain's obsessive quest to kill the white whale Moby-Dick.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/41/Moby-Dick_FE_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7b/Moby_Dick_p510_illustration.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Moby-Dick_FE_title_page.jpg",
                 "year" => 1851,
                 "genre" => "Adventure"
@@ -131,7 +131,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird",
                 "summary" => "A novel about racial injustice and moral growth in the American South.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/79/To_Kill_a_Mockingbird.JPG",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:To_Kill_a_Mockingbird.JPG",
                 "year" => 1960,
                 "genre" => "Novel"
@@ -154,7 +154,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/War_and_Peace",
                 "summary" => "A sweeping epic of Russian society during the Napoleonic Wars.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/a/af/War-and-peace_1873.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/21/Bem_postcard_7.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:War-and-peace_1873.jpg",
                 "year" => 1869,
                 "genre" => "Historical Novel"
@@ -200,7 +200,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Catcher_in_the_Rye",
                 "summary" => "A novel about teenage alienation and Holden Caulfield's critique of society.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/3/32/Rye_catcher.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Rye_catcher.jpg",
                 "year" => 1951,
                 "genre" => "Novel"
@@ -269,7 +269,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings",
                 "summary" => "An epic high-fantasy saga set in Middle-earth.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/1/1e/The_Lord_of_the_Rings_First_Edition.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Lord_of_the_Rings_First_Edition.jpg",
                 "year" => 1954,
                 "genre" => "Fantasy"
@@ -292,7 +292,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Brothers_Karamazov",
                 "summary" => "A philosophical novel dealing with faith, doubt, and morality.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/3b/Dostoevsky-Brothers_Karamazov.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6e/Churches_in_Optina_Monastery.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Dostoevsky-Brothers_Karamazov.jpg",
                 "year" => 1880,
                 "genre" => "Philosophical Novel"
@@ -315,7 +315,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Divine_Comedy",
                 "summary" => "An epic poem describing Dante's journey through Hell, Purgatory, and Heaven.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/9/9f/Divina_Commedia_Table_Of_Contents.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7b/Dante_Domenico_di_Michelino.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Divina_Commedia_Table_Of_Contents.jpg",
                 "year" => 1320,
                 "genre" => "Epic Poetry"
@@ -338,7 +338,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Jane_Eyre",
                 "summary" => "A coming-of-age novel exploring morality, love, and social class.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/50/Jane_Eyre_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/39/P30b.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Jane_Eyre_title_page.jpg",
                 "year" => 1847,
                 "genre" => "Gothic Novel"
@@ -361,7 +361,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Wuthering_Heights",
                 "summary" => "A tragic romance set on the Yorkshire moors.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wuthering_Heights_1847.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/9/9f/Wuthering_Heights_1920.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Wuthering_Heights_1847.jpg",
                 "year" => 1847,
                 "genre" => "Gothic Novel"
@@ -384,7 +384,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables",
                 "summary" => "A monumental novel about justice, redemption, and the struggle of the oppressed.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6f/Les_Miserables_1862.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/fd/Monsieur_Madeleine_par_Gustave_Brion.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Les_Miserables_1862.jpg",
                 "year" => 1862,
                 "genre" => "Historical Novel"
@@ -407,7 +407,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Odyssey",
                 "summary" => "An ancient epic poem following Odysseus' journey home.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/5f/Francesco_Hayez_1813_Odissea.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/e/ea/Fragment_Odyssee_2245_2.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Francesco_Hayez_1813_Odissea.jpg",
                 "year" => -800,
                 "genre" => "Epic Poetry"
@@ -430,7 +430,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Iliad",
                 "summary" => "An epic poem describing the events of the Trojan War.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/e/e6/Ilia_Homer.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iliad_VIII_245-253_in_cod_F205%2C_Milan%2C_Biblioteca_Ambrosiana%2C_late_5c_or_early_6c.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Ilia_Homer.jpg",
                 "year" => -750,
                 "genre" => "Epic Poetry"
@@ -453,7 +453,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Don_Quixote",
                 "summary" => "A satirical novel about an aging man who believes he is a knight.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/9/99/Don_Quixote_Title_Page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/40/Gustave_Dor%C3%A9_-_Miguel_de_Cervantes_-_Don_Quixote_-_Part_1_-_Chapter_1_-_Plate_1_%22A_world_of_disorderly_notions%2C_picked_out_of_his_books%2C_crowded_into_his_imagination%22.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Don_Quixote_Title_Page.jpg",
                 "year" => 1605,
                 "genre" => "Novel"
@@ -476,7 +476,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Madame_Bovary",
                 "summary" => "A novel about romantic illusions and the constraints of provincial life.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0e/Madame_Bovary_1857.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/f6/Leandre_-_Madame_Bovary_p323.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Madame_Bovary_1857.jpg",
                 "year" => 1856,
                 "genre" => "Realist Novel"
@@ -499,7 +499,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
                 "summary" => "A philosophical novel exploring themes of aestheticism, moral duplicity, and self-indulgence.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/2e/The_Picture_of_Dorian_Gray_1890.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Picture_of_Dorian_Gray_%282004%29_poster.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Picture_of_Dorian_Gray_1890.jpg",
                 "year" => 1890,
                 "genre" => "Philosophical Fiction"
@@ -545,7 +545,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
                 "summary" => "A novel about betrayal, revenge, and redemption.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4f/Count_of_Monte_Cristo_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/d/d6/Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Count_of_Monte_Cristo_title_page.jpg",
                 "year" => 1844,
                 "genre" => "Adventure Fiction"
@@ -568,7 +568,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Great_Expectations",
                 "summary" => "A coming-of-age novel that explores themes of wealth, social class, and personal growth.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/35/Great_Expectations_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/51/Restoration_House%2C_Rochester.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Great_Expectations_title_page.jpg",
                 "year" => 1861,
                 "genre" => "Bildungsroman"
@@ -591,7 +591,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Anna_Karenina",
                 "summary" => "A novel exploring themes of love, family, and societal norms in 19th-century Russia.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7e/Anna_Karenina_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/32/Greta_Garbo_Anna_Karenina_4.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Anna_Karenina_title_page.jpg",
                 "year" => 1877, 
                 "genre" => "Realist Novel"
@@ -614,7 +614,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
                 "summary" => "A romantic novel that critiques the British landed gentry at the end of the 18th century.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/PrideAndPrejudiceTitlePage.jpg/440px-PrideAndPrejudiceTitlePage.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/22/PrideandPrejudiceCH3.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:PrideAndPrejudiceTitlePage.jpg",
                 "year" => 1813,
                 "genre" => "Romance"
@@ -637,7 +637,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Metamorphosis",
                 "summary" => "A novella about a man who transforms into a giant insect.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1b/Metamorphosis_1915_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/a/a5/Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Metamorphosis_1915_title_page.jpg",
                 "year" => 1915,
                 "genre" => "Absurdist Fiction"
@@ -660,7 +660,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities",
                 "summary" => "A historical novel set during the French Revolution, exploring themes of resurrection and sacrifice.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0f/Tale_of_Two_Cities_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/f0/CC_No_06_A_Tale_of_Two_Cities.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Tale_of_Two_Cities_title_page.jpg",
                 "year" => 1859,
                 "genre" => "Historical Fiction"
@@ -682,7 +682,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Morome%C8%97ii",
                 "summary" => "A novel depicting the life of a Romanian peasant family before and after World War II.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/7e/Morometii_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/ro/7/7c/Morometii_afis.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Morometii_book_cover.jpg",
                 "year" => 1955,
                 "genre" => "Realist Novel"
@@ -705,7 +705,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Enigma_Otiliei",
                 "summary" => "A novel exploring the complexities of human relationships and social dynamics in interwar Romania.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/5f/Enigma_Otiliei_book_cover.jpg",
+                "image_url" => "https://lcdn.altex.ro/media/catalog/product/6/5/6570624d58e4f_main_6570624d58_658311f05443d_fb828756.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Enigma_Otiliei_book_cover.jpg",
                 "year" => 1938,
                 "genre" => "Realist Novel"
@@ -728,7 +728,7 @@
                 "edition_number" => 2,
                 "link" => "https://en.wikipedia.org/wiki/Reinforcement_Learning:_An_Introduction",
                 "summary" => "A comprehensive introduction to the field of reinforcement learning, covering both theoretical and practical aspects.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/8/8e/Reinforcement_Learning_An_Introduction_2nd_edition_cover.jpg",
+                "image_url" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFZjEYfspOlTLcvxyN_joHH45pHDrG-iPaSsbvgzGfIK_Yy-Aw",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Reinforcement_Learning_An_Introduction_2nd_edition_cover.jpg",
                 "year" => 2018,
                 "genre" => "Educational"
@@ -751,7 +751,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Cel_mai_iubit_dintre_p%C4%83m%C3%A2nteni",
                 "summary" => "A novel that delves into the moral and existential dilemmas faced by individuals in commun ist Romania.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/2/2f/Cel_mai_iubit_dintre_pamanteni_book_cover.jpg",
+                "image_url" => "https://cdn4.libris.ro/img/pozeprod/13219/13218590-2.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Cel_mai_iubit_dintre_pamanteni_book_cover.jpg",
                 "year" => 1980,
                 "genre" => "Realist Novel"
@@ -774,7 +774,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Twenty_Years_After",
                 "summary" => "The sequel to The Three Musketeers, following the adventures of the musketeers two decades later.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1b/Twenty_Years_After_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/d/da/Myladys_son_1925_David_Ljungdahl_021.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Twenty_Years_After_title_page.jpg",
                 "year" => 1845,
                 "genre" => "Adventure Fiction"
@@ -797,7 +797,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame",
                 "summary" => "A gothic novel set in medieval Paris, focusing on the tragic love story of Quasimodo and Esmeralda.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hunchback_of_Notre_Dame_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6f/Victor_Hugo-Hunchback.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Hunchback_of_Notre_Dame_title_page.jpg",
                 "year" => 1831,
                 "genre" => "Gothic Fiction"
@@ -820,7 +820,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Man_Who_Laughs",
                 "summary" => "A novel about a disfigured man and his struggles in a cruel society.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/32/The_Man_Who_Laughs_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/f1/Man_Who_Laughs_%281869%29_v2_Frontis.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Man_Who_Laughs_title_page.jpg",
                 "year" => 1869,
                 "genre" => "Gothic Fiction"
@@ -843,7 +843,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Candide",
                 "summary" => "A satirical novella that critiques optimism and explores the nature of human suffering.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4b/Candide_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/c/ce/1755_Lisbon_earthquake.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Candide_title_page.jpg",
                 "year" => 1759,
                 "genre" => "Satire"
@@ -866,7 +866,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Zorba_the_Greek",
                 "summary" => "A novel about the friendship between a young intellectual and a lively Greek peasant.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/7e/Zorba_the_Greek_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/b/b4/Zorba_book.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Zorba_the_Greek_book_cover.jpg",
                 "year" => 1946,
                 "genre" => "Philosophical Novel"
@@ -889,7 +889,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Last_Temptation_of_Christ",
                 "summary" => "A novel that explores the life and struggles of Jesus Christ, focusing on his human temptations.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/1/1e/The_Last_Temptation_of_Christ_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Last_Temptation_of_Christ_first_Greek_edition_1955.png",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Last_Temptation_of_Christ_book_cover.jpg",
                 "year" => 1955,
                 "genre" => "Philosophical Novel"
@@ -912,7 +912,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Paradise_Lost",
                 "summary" => "An epic poem that explores the biblical story of the Fall of Man and the rebellion of Satan.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4e/Paradise_Lost_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0d/MILTON_%281695%29_p362_PL_12.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Paradise_Lost_title_page.jpg",
                 "year" => 1667,
                 "genre" => "Epic Poetry"
@@ -935,7 +935,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Ulysses_(novel)",
                 "summary" => "A modernist novel that parallels the structure of Homer's Odyssey in a single day in Dublin.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ulysses_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/a/ab/JoyceUlysses2.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Ulysses_first_edition_cover.jpg",
                 "year" => 1922,
                 "genre" => "Modernist Novel"
@@ -958,7 +958,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Dubliners",
                 "summary" => "A collection of short stories depicting the everyday life of Dublin's residents in the early 20th century.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4e/Dubliners_title_page.jpg",
+                "image_url" => "https://cdn.dc5.ro/img-prod/1264354087-0.jpeg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Dubliners_title_page.jpg",
                 "year" => 1914,
                 "genre" => "Short Story Collection"
@@ -981,7 +981,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Finnegans_Wake",
                 "summary" => "A complex and experimental novel that explores the cyclical nature of history and human experience.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0e/Finnegans_Wake_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/78/Anna_Livia_Plurabelle.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Finnegans_Wake_title_page.jpg",
                 "year" => 1939,
                 "genre" => "Experimental Fiction"
@@ -1004,7 +1004,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Demian",
                 "summary" => "A novel about the spiritual awakening of a young man.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/5e/Demian_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hans_Sturzenegger_-_Hermann_Hesse_mit_Panamahut%2C_1912.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Demian_title_page.jpg",
                 "year" => 1919,
                 "genre" => "Bildungsroman"
@@ -1027,7 +1027,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Steppenwolf_(novel)",
                 "summary" => "A novel exploring the duality of human nature and the search for self-understanding.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/2f/Steppenwolf_title_page.jpg",
+                "image_url" => "https://libris.to/media/jacket/04452509_steppenwolf.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Steppenwolf_title_page.jpg",
                 "year" => 1927,
                 "genre" => "Philosophical Novel"
@@ -1050,7 +1050,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Narcissus_and_Goldmund",
                 "summary" => "A novel about the contrasting lives of two friends, one a scholarand the other an artist.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3f/Narcissus_and_Goldmund_title_page.jpg", 
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/a/ae/Fischer_Verlag_Berlin_Erstausgabe_1930.JPG", 
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Narcissus_and_Goldmund_title_page.jpg",
                 "year" => 1930,
                 "genre" => "Philosophical Novel"
@@ -1073,7 +1073,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Glass_Bead_Game",
                 "summary" => "A novel set in a futuristic society, exploring themes of intellectualism and spirituality.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6b/The_Glass_Bead_Game_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/af/HermannHesse_DasGlasperlenspiel%281st_ed%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Glass_Bead_Game_title_page.jpg",
                 "year" => 1943,
                 "genre" => "Philosophical Novel"
@@ -1096,7 +1096,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Baltagul",
                 "summary" => "A novel that tells the story of a shepherd's wife who embarks on a journey to find her missing husband.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/4/4f/Baltagul_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/d/d2/Baltagul.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Baltagul_book_cover.jpg",
                 "year" => 1930,
                 "genre" => "Realist Novel"
@@ -1119,7 +1119,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Ion_(novel)",
                 "summary" => "A novel that explores the struggles of a poor peasant who aspires to own land and improve his social status.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/a3/Ion_book_cover.jpg",
+                "image_url" => "https://cdn4.libris.ro/img/pozeprod/377/376292-1.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Ion_book_cover.jpg",
                 "year" => 1920,
                 "genre" => "Realist Novel"
@@ -1142,7 +1142,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Forest_of_the_Hanged",
                 "summary" => "A novel that portrays the moral and psychological struggles of a Romanian officer during World War I.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/5e/Forest_of_the_Hanged_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/9/9c/Forest_of_the_Hanged_Movie_Poster.jpeg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Forest_of_the_Hanged_book_cover.jpg",
                 "year" => 1922,
                 "genre" => "Realist Novel"
@@ -1165,7 +1165,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Patul_lui_Procust",
                 "summary" => "A novel that explores the themes of existentialism and the search for identity.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/3/3f/Patul_lui_Procust_book_cover.jpg",
+                "image_url" => "https://cdn4.libris.ro/img/pozeprod/603/602101-1.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Patul_lui_Procust_book_cover.jpg",
                 "year" => 1933,
                 "genre" => "Existentialist Novel"
@@ -1188,7 +1188,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Ultima_noapte_de_dragoste,_int%C3%A2ia_noapte_de_r%C4%83zboi",
                 "summary" => "A novel that delves into the complexities of love and war through the eyes of a Romanian officer.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/6/6f/Ultima_noapte_de_dragoste_book_cover.jpg",
+                "image_url" => "https://serialreaders.com/uploads/covers/ultima-noapte-de-dragoste-intaia-noapte-de-razboi-d019.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Ultima_noapte_de_dragoste_book_cover.jpg",
                 "year" => 1930,
                 "genre" => "Realist Novel"
@@ -1211,7 +1211,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Scrinul_negru",
                 "summary" => "A novel that explores the themes of memory and identity through the life of its protagonist.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/ab/Scrinul_negru_book_cover.jpg",
+                "image_url" => "https://cdn4.libris.ro/img/pozeprod/24618/24617824-1.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Scrinul_negru_book_cover.jpg",
                 "year" => 1945,
                 "genre" => "Realist Novel"
@@ -1234,7 +1234,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Morome%C8%97ii_II",
                 "summary" => "The sequel to Moromeții, continuing the story of the Moromeanu family in post-war Romania.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/8/8e/Morometii_II_book_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/ro/5/59/Morome%C8%9Bii_2.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Morometii_II_book_cover.jpg",
                 "year" => 1967,
                 "genre" => "Realist Novel"
@@ -1257,7 +1257,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Heart_of_Darkness",
                 "summary" => "A novella that explores the darkness of colonialism and human nature through a journey into the African Congo.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8e/Heart_of_Darkness_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0f/VingtAnnees_289.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Heart_of_Darkness_title_page.jpg",
                 "year" => 1899,
                 "genre" => "Novella"
@@ -1280,7 +1280,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Siddhartha_(novel)",
                 "summary" => "A novel that follows the spiritual journey of a man named Siddhartha during the time of the Buddha.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6d/Siddhartha_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vorzugsausgabe_der_Erstauflage_von_1922%2C_Originalverlagseinband.JPG",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Siddhartha_title_page.jpg",
                 "year" => 1922,
                 "genre" => "Philosophical Novel"
@@ -1304,7 +1304,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Stranger_(novel)",
                 "summary" => "A novel that explores themes of absurdism and existentialism through the experiences of its detached protagonist.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4b/The_Stranger_title_page.jpg",
+                "image_url" => "https://images.blinkist.io/images/books/66420e98777f9d00070faeb1/1_1/470.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Stranger_title_page.jpg",
                 "year" => 1942,
                 "genre" => "Philosophical Novel"
@@ -1327,7 +1327,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Fahrenheit_451",
                 "summary" => "A dystopian novel that depicts a future society where books are banned and 'firemen' burn any that are found.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_First_Edition_Cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Fahrenheit_451_First_Edition_Cover.jpg",
                 "year" => 1953,
                 "genre" => "Dystopian Fiction"
@@ -1350,7 +1350,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Lolita",
                 "summary" => "A controversial novel that explores the obsessive and illicit relationship between a middle aged man and a young girl.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/2/28/Lolita_1955_first_edition_cover.jpg",
+                "image_url" => "https://m.media-amazon.com/images/M/MV5BMTRmN2FlYjUtOTQyNi00YTA3LWI0Y2YtNDIyMWQ0Y2IwYjhlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Lolita_1955_first_edition_cover.jpg",
                 "year" => 1955,
                 "genre" => "Novel"
@@ -1373,7 +1373,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Dracula",
                 "summary" => "A gothic horror novel that tells the story of Count Dracula's attempt to move from Transylvania to England.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8f/Dracula_1897_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1e/Dracamer99.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Dracula_1897_first_edition_cover.jpg",
                 "year" => 1897,
                 "genre" => "Gothic Horror"
@@ -1396,7 +1396,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland",
                 "summary" => "A fantasy novel that follows a young girl named Alice as she falls through a rabbit hole into a whimsical and nonsensical world.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/10/Alice_in_Wonderland_%281865%29_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Alice-in-Wonderland_by-David-Revoy_2010-07-21.jpg/960px-Alice-in-Wonderland_by-David-Revoy_2010-07-21.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Alice_in_Wonderland_(1865)_first_edition_cover.jpg",
                 "year" => 1865,
                 "genre" => "Fantasy"
@@ -1419,7 +1419,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Sun_Also_Rises",
                 "summary" => "A novel that captures the disillusionment and angst of the post-World War I generation, following a group of expatriates in Europe.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/2/2e/The_Sun_Also_Rises_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8b/The_Sun_Also_Rises_%281st_ed._cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Sun_Also_Rises_first_edition_cover.jpg",
                 "year" => 1926,
                 "genre" => "Modernist Novel"
@@ -1442,7 +1442,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/A_Farewell_to_Arms",
                 "summary" => "A novel set during World War I that explores the themes of love and loss through the relationship between an American ambulance driver and a British nurse.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/79/A_Farewell_to_Arms_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/A_Farewell_to_Arms_%281929%29_cover.jpg/960px-A_Farewell_to_Arms_%281929%29_cover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:A_Farewell_to_Arms_cover.jpg",
                 "year" => 1929,
                 "genre" => "War Novel"
@@ -1465,7 +1465,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury",
                 "summary" => "A novel that employs a stream of consciousness narrative to explore the decline of a Southern family.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/5e/The_Sound_and_the_Fury_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_Sound_and_the_Fury_%281929_1st_ed_dust_jacket%29.jpg/500px-The_Sound_and_the_Fury_%281929_1st_ed_dust_jacket%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Sound_and_the_Fury_first_edition_cover.jpg",
                 "year" => 1929,
                 "genre" => "Modernist Novel"
@@ -1488,7 +1488,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/As_I_Lay_Dying",
                 "summary" => "A novel that tells the story of a family's journey to bury their deceased mother, narrated from multiple perspectives.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/8/8e/As_I_Lay_Dying_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/As_I_Lay_Dying_%281930_1st_ed_jacket_cover%29.jpg/960px-As_I_Lay_Dying_%281930_1st_ed_jacket_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:As_I_Lay_Dying_first_edition_cover.jpg",
                 "year" => 1930,
                 "genre" => "Modernist Novel"
@@ -1511,7 +1511,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Beloved_(novel)",
                 "summary" => "A novel that explores the traumatic legacy of slavery through the story of a former enslaved woman haunted by the ghost of her dead daughter.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/5e/Beloved_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beloved_%281987_1st_ed_dust_jacket_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Beloved_first_edition_cover.jpg",
                 "year" => 1987,
                 "genre" => "Historical Fiction"
@@ -1534,7 +1534,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Invisible_Man_(novel)",
                 "summary" => "A novel that addresses the social and intellectual issues facing African Americans in the early 20th century.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/4/4e/Invisible_Man_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Invisible_Man_%281952_1st_ed_jacket_cover%29.jpg/500px-Invisible_Man_%281952_1st_ed_jacket_cover%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Invisible_Man_first_edition_cover.jpg",
                 "year" => 1952,
                 "genre" => "Novel"
@@ -1557,7 +1557,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Their_Eyes_Were_Watching_God",
                 "summary" => "A novel that follows the life of Janie Crawford as she searches for her own identity and independence in the early 20th century American South.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/6/6f/Their_Eyes_Were_Watching_God_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1e/Their_Eyes_Were_Watching_God_%281937%29_front_cover%2C_first_edition.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Their_Eyes_Were_Watching_God_first_edition_cover.jpg",
                 "year" => 1937,
                 "genre" => "Novel"
@@ -1580,7 +1580,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Catch-22",
                 "summary" => "A satirical novel that critiques the absurdities of war and bureaucracy through the experiences of a World War II bombardier.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/8/8e/Catch-22_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Catch-22_%281961%29_front_cover%2C_first_edition.jpg/960px-Catch-22_%281961%29_front_cover%2C_first_edition.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Catch-22_first_edition_cover.jpg",
                 "year" => 1961,
                 "genre" => "Satirical Novel"
@@ -1603,7 +1603,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Slaughterhouse-Five",
                 "summary" => "A science fiction-infused anti-war novel that follows the experiences of Billy Pilgrim, a soldier who becomes 'unstuck in time.'",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/3/3e/Slaughterhouse-Five_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Slaughterhouse-Five_%28first_edition%29_-_Kurt_Vonnegut.jpg/960px-Slaughterhouse-Five_%28first_edition%29_-_Kurt_Vonnegut.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Slaughterhouse-Five_first_edition_cover.jpg",
                 "year" => 1969,
                 "genre" => "Science Fiction"
@@ -1626,7 +1626,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/One_Flew_Over_the_Cuckoo%27s_Nest",
                 "summary" => "A novel that explores the power dynamics within a mental institution through the experiences of its patients and staff.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/76/One_Flew_Over_the_Cuckoo%27s_Nest_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/One_Flew_Over_the_Cuckoo%27s_Nest_%281962%29_front_cover%2C_first_edition.jpg/960px-One_Flew_Over_the_Cuckoo%27s_Nest_%281962%29_front_cover%2C_first_edition.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:One_Flew_Over_the_Cuckoo%27s_Nest_first_edition_cover.jpg",
                 "year" => 1962,
                 "genre" => "Psychological Fiction"
@@ -1649,7 +1649,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Castle_(novel)",
                 "summary" => "A novel that explores themes of alienation and bureaucracy through the story of a man trying to gain access to a mysterious castle.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4e/The_Castle_title_page.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/81ta3Fv6h1L._UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Castle_title_page.jpg",
                 "year" => 1926,
                 "genre" => "Absurdist Fiction"
@@ -1672,7 +1672,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Notes_from_Underground",
                 "summary" => "A novella that delves into the mind of a bitter and isolated narrator who rejects society and its norms.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1e/Notes_from_Underground_title_page.jpg",
+                "image_url" => "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1657562670i/49455.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Notes_from_Underground_title_page.jpg",
                 "year" => 1864,
                 "genre" => "Novella"
@@ -1694,7 +1694,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Idiot",
                 "summary" => "A novel that follows the life of Prince Myshkin, a kind and innocent man whose goodness is perceived as foolishness by society.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_Idiot_title_page.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7b/Fyodor_Dostoyevsky_manuscript_and_drawing_06.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Idiot_title_page.jpg",
                 "year" => 1869,
                 "genre" => "Novel"
@@ -1717,7 +1717,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Fathers_and_Sons",
                 "summary" => "A novel that explores the generational conflict between traditionalist fathers and nihilist sons in 19th century Russia.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fathers_and_Sons_title_page.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/81ioiG25TeL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Fathers_and_Sons_title_page.jpg",
                 "year" => 1862,
                 "genre" => "Novel"
@@ -1740,7 +1740,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Resurrection_(novel)",
                 "summary" => "A novel that follows the spiritual awakening of a nobleman who seeks redemption for his past sins.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/2e/Resurrection_title_page.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/91+imEz8HJL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Resurrection_title_page.jpg",
                 "year" => 1899,
                 "genre" => "Novel"
@@ -1763,7 +1763,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Middlemarch",
                 "summary" => "A novel that explores the lives, loves, and ambitions of the residents of a fictional English town in the early 19th century.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0e/Middlemarch_first_edition_cover.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/81V+uoQjj1L._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Middlemarch_first_edition_cover.jpg",
                 "year" => 1871,
                 "genre" => "Novel"
@@ -1786,7 +1786,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Silas_Marner",
                 "summary" => "A novel that tells the story of a reclusive weaver whose life is transformed by the arrival of an orphaned child.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/5/5b/Silas_Marner_first_edition_cover.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/51DOwOeFkNL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Silas_Marner_first_edition_cover.jpg",
                 "year" => 1861,
                 "genre" => "Novel"
@@ -1809,7 +1809,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Vanity_Fair_(novel)",
                 "summary" => "A satirical novel that follows the lives of Becky Sharp and Amelia Sedley during the Napoleonic Wars.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/8e/Vanity_Fair_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vanity_Fair_01_cover.jpg/960px-Vanity_Fair_01_cover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Vanity_Fair_first_edition_cover.jpg",
                 "year" => 1848,
                 "genre" => "Novel"
@@ -1832,7 +1832,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/David_Copperfield",
                 "summary" => "The life story of David Copperfield from childhood to maturity, exploring social issues and personal growth.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/9/9b/David_Copperfield_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Dora_Spenlow_from_David_Copperfield_art_by_Frank_Reynolds.jpg/960px-Dora_Spenlow_from_David_Copperfield_art_by_Frank_Reynolds.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:David_Copperfield_first_edition_cover.jpg",
                 "year" => 1850,
                 "genre" => "Novel"
@@ -1855,7 +1855,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Oliver_Twist",
                 "summary" => "The story of an orphan boy navigating the criminal underworld of London and seeking a better life.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/12/Oliver_Twist_1838.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/81QGqaKWjXL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Oliver_Twist_1838.jpg",
                 "year" => 1838,
                 "genre" => "Novel"
@@ -1878,7 +1878,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Bleak_House",
                 "summary" => "A complex narrative intertwining the lives of multiple characters, centered around a long-running legal case.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/7/7c/Bleak_House_first_edition_cover.jpg",
+                "image_url" => "https://image.pbs.org/contentchannels/3a2YIIW-show-poster2x3-Sp5gENT.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Bleak_House_first_edition_cover.jpg",
                 "year" => 1853,
                 "genre" => "Novel"
@@ -1901,7 +1901,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Salammb%C3%B4",
                 "summary" => "Historical novel set in ancient Carthage, centered on the exotic and tumultuous events during the Mercenary War.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6f/Salammb%C3%B4_first_edition_cover.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/71jdRDUvfqL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Salammb%C3%B4_first_edition_cover.jpg",
                 "year" => 1862,
                 "genre" => "Historical novel"
@@ -1924,7 +1924,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Germinal_(novel)",
                 "summary" => "A novel depicting the harsh lives of coal miners in northern France and their struggle for social justice.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/12/Germinal_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/61/Germinal_first_edition_cover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Germinal_first_edition_cover.jpg",
                 "year" => 1885,
                 "genre" => "Novel"
@@ -1947,7 +1947,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Nana_(novel)",
                 "summary" => "The story of a young woman rising from poverty to become a famous courtesan in Paris, exploring social decadence.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/f7/Nana_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Edouard_Manet_037.jpg/960px-Edouard_Manet_037.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Nana_first_edition_cover.jpg",
                 "year" => 1880,
                 "genre" => "Novel"
@@ -1970,7 +1970,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Three_Musketeers",
                 "summary" => "Adventure novel following d'Artagnan and the three musketeers in 17th-century France.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/24/The_Three_Musketeers_first_edition_cover.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Dartagnan-musketeers.jpg/960px-Dartagnan-musketeers.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Three_Musketeers_first_edition_cover.jpg",
                 "year" => 1844,
                 "genre" => "Adventure"
@@ -1993,7 +1993,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea",
                 "summary" => "An aging Cuban fisherman engages in an epic battle with a giant marlin.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/7/73/Oldmansea.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/00/The_Old_Man_and_the_Sea_%281952%29_front_cover%2C_first_edition.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Oldmansea.jpg",
                 "year" => 1952,
                 "genre" => "Literary Fiction"
@@ -2016,7 +2016,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/East_of_Eden_(novel)",
                 "summary" => "A multigenerational story exploring themes of good and evil in California’s Salinas Valley.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/3/3b/East_of_Eden.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/East_of_Eden_%281952_1st_ed_dust_jacket%29.jpg/960px-East_of_Eden_%281952_1st_ed_dust_jacket%29.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:East_of_Eden.jpg",
                 "year" => 1952,
                 "genre" => "Family Saga"
@@ -2039,7 +2039,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Remains_of_the_Day",
                 "summary" => "A butler reflects on his life and service in a fading English estate.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/5d/The_Remains_of_the_Day.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/c/c7/KazuoIshiguro_TheRemainsOfTheDay.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Remains_of_the_Day.jpg",
                 "year" => 1989,
                 "genre" => "Literary Fiction"
@@ -2062,7 +2062,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Master_and_Margarita",
                 "summary" => "A surreal satire involving the Devil’s visit to Soviet Moscow.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/3/30/MasterAndMargaritaFirstEdition.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Master_and_Margarita_Near_Bridge_Perm.jpg/960px-Master_and_Margarita_Near_Bridge_Perm.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:MasterAndMargaritaFirstEdition.jpg",
                 "year" => 1967,
                 "genre" => "Magical Realism"
@@ -2085,7 +2085,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/A_Clockwork_Orange",
                 "summary" => "A dystopian tale about free will, violence, and state control.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/5/57/Clockwork_orange.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/71Y9TKONz6L._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Clockwork_orange.jpg",
                 "year" => 1962,
                 "genre" => "Dystopian"
@@ -2108,7 +2108,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Lord_of_the_Flies",
                 "summary" => "A group of boys stranded on an island descend into savagery.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/9/9b/Lord_of_the_Flies_first_edition.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/en/9/9b/LordOfTheFliesBookCover.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Lord_of_the_Flies_first_edition.jpg",
                 "year" => 1954,
                 "genre" => "Allegorical Novel"
@@ -2131,7 +2131,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Trial",
                 "summary" => "Josef K. is arrested by a mysterious authority and faces an incomprehensible legal system.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/1/1b/Der_Prozess_FirstEdition.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/f/f9/TrialKafka.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Der_Prozess_FirstEdition.jpg",
                 "year" => 1925,
                 "genre" => "Absurdist Fiction"
@@ -2154,7 +2154,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Magic_Mountain",
                 "summary" => "A philosophical novel set in a Swiss sanatorium, exploring time, illness, and modernity.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/8/88/Magic_Mountain.jpg",
+                "image_url" => "https://cdn.dc5.ro/img-prod/250807083-0.jpeg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Magic_Mountain.jpg",
                 "year" => 1924,
                 "genre" => "Philosophical Novel"
@@ -2177,7 +2177,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra",
                 "summary" => "A philosophical work introducing Nietzsche’s ideas of the Übermensch and eternal recurrence.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/8/89/Zarathustra_1st_edition.jpg",
+                "image_url" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ouBARuc6RfwNepcqEk9pYw6CKmyo1Wk9GNwZAG97v6QKfZ98LsLBbH25bV6C9XKCh5F_rzIdNTOUGGNONfQuD89krP2lQlA6k7aT8_Q&s=10",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Zarathustra_1st_edition.jpg",
                 "year" => 1883,
                 "genre" => "Philosophy"
@@ -2200,7 +2200,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Name_of_the_Rose",
                 "summary" => "A medieval murder mystery mixing theology, semiotics, and detective fiction.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/4/43/Name_of_the_Rose_cover.jpg",
+                "image_url" => "https://cdn.dc5.ro/img-prod/205804-0.jpeg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Name_of_the_Rose_cover.jpg",
                 "year" => 1980,
                 "genre" => "Historical Mystery"
@@ -2223,7 +2223,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Portrait_of_a_Lady",
                 "summary" => "The story of Isabel Archer, a young American woman navigating European society and personal freedom.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Portrait_of_a_Lady_1881.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/61ULWZH71RL._AC_UF1000,1000_QL80_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:The_Portrait_of_a_Lady_1881.jpg",
                 "year" => 1881,
                 "genre" => "Literary Fiction"
@@ -2246,7 +2246,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Scarlet_Letter",
                 "summary" => "Hester Prynne confronts punishment and shame in Puritan New England.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/4/4e/ScarletLetter_first-edition_cover.jpg",
+                "image_url" => "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781627939911/the-scarlet-letter-9781627939911_hr.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:ScarletLetter_first-edition_cover.jpg",
                 "year" => 1850,
                 "genre" => "Historical Fiction"
@@ -2269,7 +2269,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Call_of_the_Wild",
                 "summary" => "A domesticated dog is thrust into the brutal world of the Yukon wilderness.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/en/a/a1/Call_of_the_Wild_buck.jpg",
+                "image_url" => "https://m.media-amazon.com/images/I/81gC9oXiMHL._AC_UF350,350_QL50_.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Call_of_the_Wild_buck.jpg",
                 "year" => 1903,
                 "genre" => "Adventure"
@@ -2292,7 +2292,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Red_and_the_Black",
                 "summary" => "Julien Sorel rises and falls in French society through ambition and manipulation.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/9/90/Red_and_the_Black.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/2/2b/StendhalRedandBlack04.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:Red_and_the_Black.jpg",
                 "year" => 1830,
                 "genre" => "Psychological Novel"
@@ -2315,7 +2315,7 @@
                 "edition_number" => 1,
                 "link" => "https://en.wikipedia.org/wiki/The_Secret_Garden",
                 "summary" => "A neglected girl discovers a hidden garden that transforms her life.",
-                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/0/0c/SecretGarden1911.jpg",
+                "image_url" => "https://upload.wikimedia.org/wikipedia/commons/e/ed/Secret-garden_15196170106_o.jpg",
                 "imageLink" => "https://en.wikipedia.org/wiki/File:SecretGarden1911.jpg",
                 "year" => 1911,
                 "genre" => "Children's Literature"
