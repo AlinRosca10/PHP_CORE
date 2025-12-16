@@ -1,4 +1,6 @@
 <?php
+    require_once('functii/functie_suma3numere.php');
+
     //vefificarea simultana pentru valorile setate
     if (isset($_GET['a'], $_GET['b'], $_GET['c'], $_GET['x'], $_GET['y'], $_GET['z'])) {
 
@@ -16,6 +18,10 @@
         echo "a + b = " . ($a + $b) .
                 "<br> c + x = " . ($c + $x) .
                 "<br> y + z = " . ($y + $z);
+        echo "<br>";
+        suma3numere($a, $b, $c);
+        echo "<br>";        
+        suma3numere($x, $y, $z);
     } else {
         echo 'Te rog frumos sa introduci date valide in adresa URL exemplu a=1&b=2&c=3&x=4&y=5&z=6.';
     }
