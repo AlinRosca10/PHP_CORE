@@ -9,10 +9,13 @@
         var_export($z);
         $sum = 0;
         foreach ($z as $number) {
-            $sum += $number;
+            if (is_numeric($number)) {
+
+                $sum += $number;
+            }
         }
 
         echo "<br>Suma este " . $sum . "<br>";
     }
-    suma4numere(12, 321, 21, 112, 2321, 12, 76, 89);
+    suma4numere(12, 321, 21, 112, 2321, 12, 76, 89, '25aaaaa');
 ?>
