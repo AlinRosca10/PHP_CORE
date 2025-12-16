@@ -14,5 +14,5 @@
 
         echo "<br>Suma este " . $sum . "<br>";
     }
-    suma4numere(12, 321, 21, 112, 2321, 12);
+    suma4numere(12, 321, 21, 112, 2321, 12, 76, 89);
 ?>
