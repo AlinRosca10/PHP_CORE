@@ -39,40 +39,16 @@
             <nav class="navbar fixed-top navbar-dark bg-dark">
                 <a class="navbar-brand" href="a">Lista de carti</a>
             </nav>
-            <div class="container" style="padding-top:80px;">
-                <form method="get" class="mb-4">
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <input type="text" name="author" class="form-control"
-                                placeholder="Search by author"
-                                value="<?php echo $_GET['author'] ?? ''; ?>">
-                        </div>
-
-                        <div class="col-md-4">
-                            <input type="number" name="year" class="form-control"
-                                placeholder="Search by year"
-                                value="<?php echo $_GET['year'] ?? ''; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                            <input type="text" name="genre" class="form-control"
-                                placeholder="Search by genre"
-                                value="<?php echo $_GET['genre'] ?? ''; ?>">
-                        </div>
-
-                        <div class="col-md-1">
-                            <button type="submit" class="btn btn-primary btn-block">
-                                🔍
-                            </button>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
 <?php include('book.php'); ?>
+<?php
+// extragem genurile unice
+$genres = array_unique(array_map(function ($book) {
+    return $book['genre'];
+}, $books));
+
+// sortare alfabetică
+sort($genres);
+?>
 <?php
 $filteredBooks = $books;
 
@@ -97,6 +73,45 @@ if (!empty($_GET['genre'])) {
     });
 }
 ?>
+            <div class="container" style="padding-top:80px;">
+                <form method="get" class="mb-4">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <input type="text" name="author" class="form-control"
+                                placeholder="Search by author"
+                                value="<?php echo $_GET['author'] ?? ''; ?>">
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="number" name="year" class="form-control"
+                                placeholder="Search by year"
+                                value="<?php echo $_GET['year'] ?? ''; ?>">
+                        </div>
+
+                        <div class="col-md-3">
+                            <select name="genre" class="form-control">
+                                <option value="">All genres</option>
+                                    <?php foreach ($genres as $g): ?>
+                                        <option value="<?php echo $g; ?>"
+                                            <?php if (!empty($_GET['genre']) && $_GET['genre'] == $g) echo 'selected'; ?>>
+                                            <?php echo $g; ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                🔍
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
 <?php if (empty($filteredBooks)): ?>
     <div class="col-12">
         <div class="alert alert-warning text-center">
