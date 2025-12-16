@@ -110,6 +110,20 @@ if (!empty($_GET['genre'])) {
                     </div>
                 </form>
             </div>
+
+            <div class="container" style="padding-top:80px;">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <input type="text" id="search" class="form-control"
+                            placeholder="Search live by title, author, genre, year...">
+                    </div>
+                </div>
+
+                <div class="row" id="results">
+                    <!-- cartile se vor încărca aici -->
+                </div>
+            </div>
+
         </div>
 
 <?php if (empty($filteredBooks)): ?>
@@ -158,6 +172,19 @@ if (!empty($_GET['genre'])) {
             </div>
 
         </div>
+    <script>
+        const searchInput = document.getElementById('search');
+        const results = document.getElementById('results');
 
+        searchInput.addEventListener('keyup', function () {
+            const query = this.value;
+
+            fetch('search.php?q=' + encodeURIComponent(query))
+                .then(response => response.text())
+                .then(data => {
+                    results.innerHTML = data;
+                });
+        });
+        </script>
     </body>
 </html>
