@@ -18,10 +18,13 @@
         echo "a + b = " . ($a + $b) .
                 "<br> c + x = " . ($c + $x) .
                 "<br> y + z = " . ($y + $z);
-        echo "<br>";
-        suma3numere($a, $b, $c);
-        echo "<br>";        
+
+        echo "<br> Afisarea rezultatelor folosind o functie ce primeste 3 parametrii <br>";
+        suma3numere($a, $b, $c);      
         suma3numere($x, $y, $z);
+
+        echo "Afisarea rezultatelor prin functia ce primeste 3 parametrii <br>";
+        suma3numere($a, $b) +  suma3numere($c, $x) + suma3numere($y, $z);
     } else {
         echo 'Te rog frumos sa introduci date valide in adresa URL exemplu a=1&b=2&c=3&x=4&y=5&z=6.';
     }
