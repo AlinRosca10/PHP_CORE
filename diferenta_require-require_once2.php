@@ -39,14 +39,76 @@
             <nav class="navbar fixed-top navbar-dark bg-dark">
                 <a class="navbar-brand" href="a">Lista de carti</a>
             </nav>
+            <div class="container" style="padding-top:80px;">
+                <form method="get" class="mb-4">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <input type="text" name="author" class="form-control"
+                                placeholder="Search by author"
+                                value="<?php echo $_GET['author'] ?? ''; ?>">
+                        </div>
+
+                        <div class="col-md-4">
+                            <input type="number" name="year" class="form-control"
+                                placeholder="Search by year"
+                                value="<?php echo $_GET['year'] ?? ''; ?>">
+                        </div>
+
+                        <div class="col-md-3">
+                            <input type="text" name="genre" class="form-control"
+                                placeholder="Search by genre"
+                                value="<?php echo $_GET['genre'] ?? ''; ?>">
+                        </div>
+
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                🔍
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
 
 <?php include('book.php'); ?>
+<?php
+$filteredBooks = $books;
+
+if (!empty($_GET['author'])) {
+    $author = strtolower($_GET['author']);
+    $filteredBooks = array_filter($filteredBooks, function ($book) use ($author) {
+        return strpos(strtolower($book['author']), $author) !== false;
+    });
+}
+
+if (!empty($_GET['year'])) {
+    $year = $_GET['year'];
+    $filteredBooks = array_filter($filteredBooks, function ($book) use ($year) {
+        return $book['year'] == $year;
+    });
+}
+
+if (!empty($_GET['genre'])) {
+    $genre = strtolower($_GET['genre']);
+    $filteredBooks = array_filter($filteredBooks, function ($book) use ($genre) {
+        return strpos(strtolower($book['genre']), $genre) !== false;
+    });
+}
+?>
+<?php if (empty($filteredBooks)): ?>
+    <div class="col-12">
+        <div class="alert alert-warning text-center">
+            No books found 😞
+        </div>
+    </div>
+<?php endif; ?>
 
         <div style="padding-top: 50px;">
             <div class="container">
                 <div class="row">
-<?php foreach ($books as $book): ?>
+<?php foreach ($filteredBooks as $book): ?>
                     <div class="col-6 col-sm-4 col-md-4 col-lg-4 mt-2 ">
                         <div class="card">
                             <img class="card-img-top" style="height: 500px" src="<?php echo $book['image_url']; ?>" alt="Card image" style="width: 100V">
