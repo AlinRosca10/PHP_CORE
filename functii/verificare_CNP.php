@@ -1,13 +1,13 @@
 <?php
-    function verificare_CNP (int $CNP) {
-        if (is_numeric($CNP) && !is_null($CNP)) {
+    function verificare_CNP (string $CNP) {
+        if (ctype_digit($CNP) && strlen($CNP) === 13) {
             $i = 0;
             while ($CNP > 0) {
                 $array_cnp[$i] = $CNP % 10;
                 $i++;
                 $CNP = (int) $CNP / 10;
             }
-            if ($i === 14) {
+            if ($i === 13) {
 
                 // verificare sex S
                 $sex = ($array_cnp[12] % 2 === 0) ? 'Feminin' : 'Masculin';
