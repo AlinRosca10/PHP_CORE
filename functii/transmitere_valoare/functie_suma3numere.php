@@ -3,7 +3,7 @@
         echo "Suma celor 3 numere $x, $y si $z este " . ($x + $y + $z) . "<br>";
     }
 
-    suma3numere(12, 2132, 32, 23); // nu foloseste al patrulea parametru
+    //suma3numere(12, 2132, 32, 23); // nu foloseste al patrulea parametru
 
     function suma4numere(... $z) {
         var_export($z);
