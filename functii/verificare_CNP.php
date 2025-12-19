@@ -1,35 +1,45 @@
 <?php
     function verificare_CNP (string $CNP) {
         if (ctype_digit($CNP) && strlen($CNP) === 13) {
-            $i = 0;
-            while ($CNP > 0) {
-                $array_cnp[$i] = $CNP % 10;
-                $i++;
-                $CNP = (int) $CNP / 10;
+
+            $array_cnp = array_map('intval', str_split($CNP));
+
+            for ($i = 0; $i < 13; $i++) {
+                if ($array_cnp[$i] >= 0 && $array_cnp[$i] <= 9) {
+                    $validare_cifra_cnp = true;
+                } else {
+                    $validare_cifra_cnp = false;
+                    echo "Cifra $array_cnp[$i] de la pozitia $i (identarea incepe de la 0) nu este o cifra intreaga";
+                    break;
+                }
             }
-            if ($i === 13) {
+
+            if (count($array_cnp) === 13 && $validare_cifra_cnp === true && 
+                                                        isset($array_cnp[0], $array_cnp[1], $array_cnp[2], $array_cnp[3],
+                                                            $array_cnp[4], $array_cnp[5], $array_cnp[6], $array_cnp[7],
+                                                                $array_cnp[8], $array_cnp[9], $array_cnp[10], $array_cnp[11], $array_cnp[12])) {
 
                 // verificare sex S
-                $sex = ($array_cnp[12] % 2 === 0) ? 'Feminin' : 'Masculin';
+                $sex = ($array_cnp[0] % 2 === 0) ? 'Feminin' : 'Masculin';
                 echo "Sexul este $sex. <br>";
 
                 // verificare an nastere AA
-                switch ($array_cnp[12]) {
+                switch ($array_cnp[0]) {
                     case 1:
                     case 2:
-                        $an_nastere = 19 * 100 + $array_cnp[11] * 10 + $array_cnp[10];
+                        $an_nastere = 19 * 100 + $array_cnp[1] * 10 + $array_cnp[2];
                         break;
                     case 3:
                     case 4:
-                        $an_nastere = 18 * 100 + $array_cnp[11] * 10 + $array_cnp[10];
+                        $an_nastere = 18 * 100 + $array_cnp[1] * 10 + $array_cnp[2];
                         break;
                     case 5:
                     case 6:
-                        $an_nastere = 20 * 100 + $array_cnp[11] * 10 + $array_cnp[10];
+                        $an_nastere = 20 * 100 + $array_cnp[1] * 10 + $array_cnp[2];
                         break;
                     case 7:
                     case 8:
-                        $an_nastere = $array_cnp[11] * 10 + $array_cnp[10];
+                        $an_nastere = $array_cnp[1] * 10 + $array_cnp[2];
                         if ($an_nastere <= 25) {
                             $an_nastere = 20 * 100 + $an_nastere;
                         } else {
@@ -39,13 +49,18 @@
                         echo "<p style='color: green;'>Persoana are rezidenta straina pe teritoriul Romaniei.</p> <br>";
                         break;
                     default:
-                        $an_nastere = $array_cnp[11] * 10 + $array_cnp[10];
+                        $an_nastere = $array_cnp[1] * 10 + $array_cnp[2];
+                        if ($an_nastere <= 25) {
+                            $an_nastere = 20 * 100 + $an_nastere;
+                        } else {
+                            $an_nastere = 19 * 100 + $an_nastere;
+                        }
                         $rezidenta_straina = false;
                         $strain = true;
                         echo "<p style='color: red;'>Persoana este straina si nu are rezidenta straina pe teritoriul Romaniei.</p> <br>";
                         break;
                 }
-                if ($an_nastere % 4 === 0) {
+                if (($an_nastere % 400 === 0) || ($an_nastere % 4 === 0 && $an_nastere % 100 !== 0)) {
                     $an_bisect = true;
                     $zile_maxim_luna = 29;
                 } else {
@@ -55,7 +70,7 @@
                 echo "Anul de nastere este $an_nastere, care " . (($an_bisect === true) ? 'este ' : 'nu este ') . 'bisect. '; 
 
                 //verificare luna de nastere LL
-                $luna_nastere = $array_cnp[9] * 10 + $array_cnp[8];
+                $luna_nastere = $array_cnp[3] * 10 + $array_cnp[4];
                 switch ($luna_nastere) {
                     case 1:
                         $luna_nastere_string = 'ianuarie';
@@ -112,15 +127,15 @@
                 echo "<br>Luna de nastere este $luna_nastere_string si a avut un numar maxim de $zile_maxim_luna zile. <br>";
 
                 // verificare ziua de nastere ZZ
-                $ziua_nastere = $array_cnp[7] * 10 + $array_cnp[6];
-                if ($ziua_nastere > $zile_maxim_luna) {
+                $ziua_nastere = $array_cnp[5] * 10 + $array_cnp[6];
+                if (($ziua_nastere <= 0) || ($ziua_nastere > $zile_maxim_luna)) {
                     echo "Ziua de nastere este invalida. Va rog sa introduceti un cod numeric personal (C.N.P.) valid de tipul 
                             <a href='https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)#ZZ' target='_blank'> ZZ </a>";
                 }
                 echo "Ziua de nastere este $ziua_nastere. <br>";
 
                 // verificare judet JJ
-                $judet_nastere = $array_cnp[5] * 10 + $array_cnp[4];
+                $judet_nastere = $array_cnp[7] * 10 + $array_cnp[8];
                 switch ($judet_nastere) {
                     case 1: 
                         $nume_judet = 'Alba'; 
@@ -286,7 +301,7 @@
                 }
 
                 // verificare numar secvential de atribuire NNN
-                $numar_nastere = $array_cnp[3] * 100 + $array_cnp[2] * 10 + $array_cnp[1];
+                $numar_nastere = $array_cnp[9] * 100 + $array_cnp[10] * 10 + $array_cnp[11];
                 if($numar_nastere === 1) {
                     echo "A fost prima nastere de sex $sex din $ziua_nastere/$luna_nastere/$an_nastere din judetul $nume_judet. <br>";
 
@@ -302,25 +317,12 @@
                 }
 
                 // cerificare cifra de control
-                define("CONTROL_CNP", [
-                    9,
-                    7,
-                    2,
-                    8,
-                    5,
-                    3,
-                    6,
-                    4,
-                    1,
-                    9,
-                    7,
-                    2
-                ]);
+                $control_cnp = [2, 7, 9, 1, 4, 6, 3, 5, 8, 2, 7, 9];
 
-                $cifra_control = $array_cnp[0];
+                $cifra_control = $array_cnp[12];
                 $suma_cifra_control = 0;
-                for ($i = 1; $i < 13; $i++) {
-                    $suma_cifra_control += $array_cnp[$i] * CONTROL_CNP[$i-1];
+                for ($i = 0; $i < 12; $i++) {
+                    $suma_cifra_control += $array_cnp[$i] * $control_cnp[$i];
                 }
                 if ($suma_cifra_control % 11 === 10) {
                     $cifra_control2 = 1;
@@ -352,5 +354,5 @@
         }
     }
 
-    verificare_CNP (7960107250015);
+    verificare_CNP ('2010107250019');
 ?>
