@@ -21,26 +21,63 @@
 
                 // verificare sex S
                 require_once 'functii_auxiliare_CNP/verificare_sex.php';
+                $rezultat_sex = verificare_sex($array_cnp);
+
+                if (!isset($rezultat_sex)) {
+                    return;
+                }
 
                 // verificare an nastere AA
                 require_once 'functii_auxiliare_CNP/verificare_an.php';
+                $rezultat_verificare_an = verificare_an($array_cnp);
+                // daca luna este februarie, preluare zile maxim luna din rezultatul functiei verificare_an
+                $zile_maxim_luna = $rezultat_verificare_an['zile_maxim_luna'] ?? null;
+
+                if (!isset($rezultat_verificare_an)) {
+                    return;
+                }
 
                 //verificare luna de nastere LL
                 require_once 'functii_auxiliare_CNP/verificare_luna.php';
+                $rezultat_verificare_luna = verificare_luna($array_cnp, $zile_maxim_luna);
+                // preluare zile maxim luna din rezultatul functiei verificare_luna
+                $zile_maxim_luna = $rezultat_verificare_luna['zile_maxim_luna'];
+
+                if (!isset($rezultat_verificare_luna)) {
+                    return;
+                }
 
                 // verificare ziua de nastere ZZ
                 require_once 'functii_auxiliare_CNP/verificare_zi.php';
+                $rezultat_verificare_zi = verificare_zi($array_cnp, $zile_maxim_luna);
+
+                if (!isset($rezultat_verificare_zi)) {
+                    return;
+                }
 
                 // verificare judet JJ
                 require_once 'functii_auxiliare_CNP/verificare_judet.php';
+                $rezultat_verificare_judet = verificare_judet($array_cnp);
+
+                if (!isset($rezultat_verificare_judet)) {
+                    return;
+                }
 
                 // verificare numar secvential de atribuire NNN
                 require_once 'functii_auxiliare_CNP/verificare_numar_secvential_atribuire.php';
+                $rezultat_verificare_numar_secvential_atribuire = verificare_numar_secvential_atribuire($array_cnp, $rezultat_sex['sex'], $rezultat_verificare_zi['ziua_nastere'], $rezultat_verificare_luna['luna_nastere'], $rezultat_verificare_an['an_nastere'], $rezultat_verificare_judet['nume_judet']);
 
+                if (!isset($rezultat_verificare_numar_secvential_atribuire)) {
+                    return;
+                }
                 // verificare cifra de control
                 require_once 'functii_auxiliare_CNP/verificare_cifra_control.php';
+                $rezultat_verificare_cifra_control = verificare_cifra_control($array_cnp); 
+                if (!isset($rezultat_verificare_cifra_control)) {
+                    return;
+                }
 
-                } else {
+            } else {
                 echo "In codul numeric personal <a href='https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)' target='_blank'>(C.N.P.)</a> nu sunt 13 cifre, va rugam sa introduceti un <a href='https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)' target='_blank'>C.N.P. valid</a> format din 13 cifre.";
             }
             
@@ -57,5 +94,5 @@
         }
     }
 
-    verificare_CNP ('2010107250019');
+    verificare_CNP ('5001207010017');
 ?>
