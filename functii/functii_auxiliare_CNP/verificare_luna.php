@@ -52,12 +52,15 @@
                 $zile_maxim_luna = 31;
                 break;
             default:
-                echo "Luna de nastere este invalida. Va rog sa introduceti un cod numeric personal (C.N.P.) valid de tipul 
+                echo "<br>Luna de nastere este invalida. Va rog sa introduceti un cod numeric personal (C.N.P.) valid de tipul 
                                         <a href='https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)#LL' target='_blank'> LL </a>";
                 break;
         }
-        echo "<br>Luna de nastere este $luna_nastere_string si a avut un numar maxim de $zile_maxim_luna zile. <br>";
-    
+        if (!isset($luna_nastere_string)) {
+            $luna_nastere_string = null;
+        } else {
+            echo "<br>Luna de nastere este $luna_nastere_string si a avut un numar maxim de $zile_maxim_luna zile. <br>";
+        }
         return ['luna_nastere_string' => $luna_nastere_string, 'luna_nastere' => $luna_nastere, 'zile_maxim_luna' => $zile_maxim_luna];
     }
 ?>

@@ -164,6 +164,8 @@
         }
         if (isset($nume_judet)) {
             echo "Judetul de nastere este $nume_judet. <br>";
+        } else {
+            $nume_judet = null;
         }
         return ['judet_nastere' => $judet_nastere, 'nume_judet' => $nume_judet];
     }

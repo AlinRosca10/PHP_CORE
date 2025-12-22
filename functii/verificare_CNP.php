@@ -43,7 +43,7 @@
                 // preluare zile maxim luna din rezultatul functiei verificare_luna
                 $zile_maxim_luna = $rezultat_verificare_luna['zile_maxim_luna'];
 
-                if (!isset($rezultat_verificare_luna)) {
+                if (!isset($rezultat_verificare_luna) || $rezultat_verificare_luna['luna_nastere_string'] === null) {
                     return;
                 }
 
@@ -51,7 +51,7 @@
                 require_once 'functii_auxiliare_CNP/verificare_zi.php';
                 $rezultat_verificare_zi = verificare_zi($array_cnp, $zile_maxim_luna);
 
-                if (!isset($rezultat_verificare_zi)) {
+                if (!isset($rezultat_verificare_zi) || $rezultat_verificare_zi['ziua_nastere'] === null) {
                     return;
                 }
 
@@ -59,7 +59,7 @@
                 require_once 'functii_auxiliare_CNP/verificare_judet.php';
                 $rezultat_verificare_judet = verificare_judet($array_cnp);
 
-                if (!isset($rezultat_verificare_judet)) {
+                if (!isset($rezultat_verificare_judet['judet_nastere'], $rezultat_verificare_judet['nume_judet']) || $rezultat_verificare_judet['nume_judet'] === null || $rezultat_verificare_judet['judet_nastere'] === null) {
                     return;
                 }
 
@@ -67,7 +67,7 @@
                 require_once 'functii_auxiliare_CNP/verificare_numar_secvential_atribuire.php';
                 $rezultat_verificare_numar_secvential_atribuire = verificare_numar_secvential_atribuire($array_cnp, $rezultat_sex['sex'], $rezultat_verificare_zi['ziua_nastere'], $rezultat_verificare_luna['luna_nastere'], $rezultat_verificare_an['an_nastere'], $rezultat_verificare_judet['nume_judet']);
 
-                if (!isset($rezultat_verificare_numar_secvential_atribuire)) {
+                if (!isset($rezultat_verificare_numar_secvential_atribuire) || $rezultat_verificare_numar_secvential_atribuire['numar_nastere'] === null) {
                     return;
                 }
                 // verificare cifra de control
@@ -94,5 +94,5 @@
         }
     }
 
-    verificare_CNP ('5001207010017');
+    verificare_CNP ('5001231020028');
 ?>
